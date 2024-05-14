@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://example.com/about/"/>
+  <link rel="canonical" href="http://example.com/vuequilleditor-note/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -33,19 +33,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>about - Hexo</title>
+  <title>VueQuillEditor用法笔记 - Hexo</title>
   <meta name="keywords" content="null">
   <meta desc name="description" content="blog - lzy - Hexo">
   
-<meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="http://example.com/about/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VueQuillEditor用法笔记">
+<meta property="og:url" content="http://example.com/VueQuillEditor-note/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="我印象最深刻的一句话是：有病就去治 请允许我载着理发店">
+<meta property="og:description" content="1.安装1234npm install vue-quill-editor --save&#x2F;&#x2F;语法高亮npm install highlight.js  2.main.js12345import VueQuillEditor from &#x27;vue-quill-editor&#x27;import &#x27;quill&#x2F;dist&#x2F;quill.core.css&#x27;import &amp;#x27">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2024-05-14T12:48:48.000Z">
-<meta property="article:modified_time" content="2024-05-14T14:58:40.081Z">
+<meta property="article:published_time" content="2022-09-17T20:01:02.000Z">
+<meta property="article:modified_time" content="2024-05-14T14:44:45.000Z">
 <meta property="article:author" content="lzy">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -2339,7 +2339,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class='cover-wrapper page dock' style="display: none;">
+      <div id="none" class='cover-wrapper post dock' style="display: none;">
         
   <div class='cover-bg lazyload placeholder' data-bg="https://gcore.jsdelivr.net/gh/MHG-LAB/cron@gh-pages/bing/bing.jpg"></div>
 
@@ -2400,8 +2400,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper">
           
 <div id="l_main" class=''>
-  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-page" id="page" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://example.com/about/index.html">
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="http://example.com/VueQuillEditor-note/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Hexo">
   </span>
@@ -2422,7 +2422,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        about
+        VueQuillEditor用法笔记
       </h1>
       <div class='new-meta-box'>
         
@@ -2439,14 +2439,24 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url"><span itemprop="name">前端</span></a>
+      </span>
+    
+  </div>
+
 
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-05-14T20:48:48+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-09-18T04:01:02+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：May 14, 2024</p>
+    <p>发布于：Sep 18, 2022</p>
   </a>
 </div>
 
@@ -2469,11 +2479,29 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>我印象最深刻的一句话是：有病就去治</p>
-<p>请允许我载着理发店</p>
+    <h2 id="1-安装"><a href="#1-安装" class="headerlink" title="1.安装"></a>1.安装</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">npm install vue-quill-editor --save</span><br><span class="line"></span><br><span class="line">//语法高亮</span><br><span class="line">npm install highlight.js</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-main-js"><a href="#2-main-js" class="headerlink" title="2.main.js"></a>2.main.js</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">VueQuillEditor</span> <span class="keyword">from</span> <span class="string">&#x27;vue-quill-editor&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;quill/dist/quill.core.css&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;quill/dist/quill.snow.css&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;quill/dist/quill.bubble.css&#x27;</span></span><br><span class="line"><span class="title class_">Vue</span>.<span class="title function_">use</span>(<span class="title class_">VueQuillEditor</span>);</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-使用"><a href="#3-使用" class="headerlink" title="3.使用"></a>3.使用</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      &lt;div class=&quot;container&quot;&gt;</span><br><span class="line">        &lt;quill-editor class=&quot;ql-container&quot;</span><br><span class="line">                      ref=&quot;myTextEditor&quot;</span><br><span class="line">                      v-model=&quot;content&quot;</span><br><span class="line">                      :options=&quot;editorOption&quot;</span><br><span class="line">                      @blur=&quot;onEditorBlur($event)&quot;</span><br><span class="line">                      @focus=&quot;onEditorFocus($event)&quot;</span><br><span class="line">                      @ready=&quot;onEditorReady($event)&quot;</span><br><span class="line">                      @change=&quot;onEditorChange($event)&quot;&gt;</span><br><span class="line">        &lt;/quill-editor&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">      &lt;!-- 回显获取的数据 --&gt;</span><br><span class="line">      &lt;button @click=&quot;show&quot;&gt;展示文本内容&lt;/button&gt;</span><br><span class="line">      &lt;div class=&quot;ql-snow container1&quot;&gt;</span><br><span class="line">        &lt;div class=&quot;ql-editor&quot; v-html=&quot;data&quot; v-highlight&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/template&gt;</span><br><span class="line">  &lt;script&gt;</span><br><span class="line">    import java from &#x27;highlight.js&#x27;;</span><br><span class="line">    export default &#123;</span><br><span class="line">      data () &#123;</span><br><span class="line">        return &#123;</span><br><span class="line">          data:`&lt;pre class=&quot;ql-syntax&quot; spellcheck=&quot;false&quot;&gt;&lt;span class=&quot;hljs-function&quot;&gt;&lt;span class=&quot;hljs-keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;hljs-keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;hljs-keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;hljs-title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;hljs-params&quot;&gt;(&lt;span class=&quot;hljs-keyword&quot;&gt;String&lt;/span&gt;[] args)&lt;/span&gt;&lt;/span&gt;&#123;</span><br><span class="line">      System.out.&lt;span class=&quot;hljs-built_in&quot;&gt;println&lt;/span&gt;(&lt;span class=&quot;hljs-string&quot;&gt;&quot;hello,world&quot;&lt;/span&gt;);</span><br><span class="line">&#125;</span><br><span class="line">&lt;/pre&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;h1 class=&quot;ql-indent-1&quot;&gt;&lt;strong&gt;测试富文本编辑器&lt;/strong&gt;&lt;/h1&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(230, 0, 0);&quot;&gt;ABCD&lt;/span&gt;&lt;/p&gt;`,</span><br><span class="line">          content: null,</span><br><span class="line">          editorOption: &#123;</span><br><span class="line">            modules: &#123;</span><br><span class="line">              toolbar: [</span><br><span class="line">                [&quot;bold&quot;, &quot;italic&quot;, &quot;underline&quot;, &quot;strike&quot;], // 加粗 斜体 下划线 删除线</span><br><span class="line">                [&quot;blockquote&quot;, &quot;code-block&quot;], // 引用  代码块</span><br><span class="line">                [&#123; header: 1 &#125;, &#123; header: 2 &#125;], // 1、2 级标题</span><br><span class="line">                [&#123; list: &quot;ordered&quot; &#125;, &#123; list: &quot;bullet&quot; &#125;], // 有序、无序列表</span><br><span class="line">                [&#123; script: &quot;sub&quot; &#125;, &#123; script: &quot;super&quot; &#125;], // 上标/下标</span><br><span class="line">                [&#123; indent: &quot;-1&quot; &#125;, &#123; indent: &quot;+1&quot; &#125;], // 缩进</span><br><span class="line">                // [&#123;&#x27;direction&#x27;: &#x27;rtl&#x27;&#125;],                         // 文本方向</span><br><span class="line">                [&#123; size: [&quot;small&quot;, false, &quot;large&quot;, &quot;huge&quot;] &#125;], // 字体大小</span><br><span class="line">                [&#123; header: [1, 2, 3, 4, 5, 6, false] &#125;], // 标题</span><br><span class="line">                [&#123; color: [] &#125;, &#123; background: [] &#125;], // 字体颜色、字体背景颜色</span><br><span class="line">                [&#123; font: [] &#125;], // 字体种类</span><br><span class="line">                [&#123; align: [] &#125;], // 对齐方式</span><br><span class="line">                [&quot;clean&quot;], // 清除文本格式</span><br><span class="line">                //[&quot;link&quot;, &quot;image&quot;, &quot;video&quot;] // 链接、图片、视频</span><br><span class="line">              ], //工具菜单栏配置</span><br><span class="line">              syntax:&#123;</span><br><span class="line">                //语法高亮</span><br><span class="line">                highlight:text =&gt;&#123;</span><br><span class="line">                  return java.highlightAuto(text).value </span><br><span class="line">                &#125;</span><br><span class="line">              &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            placeholder: &#x27;请在这里添加产品描述&#x27;, //提示</span><br><span class="line">            readyOnly: false, //是否只读</span><br><span class="line">            theme: &#x27;snow&#x27;, //主题 snow/bubble</span><br><span class="line">            syntax: true, //语法检测</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;,</span><br><span class="line">      methods: &#123;</span><br><span class="line">        // 失去焦点</span><br><span class="line">        onEditorBlur(editor) &#123;&#125;,</span><br><span class="line">        // 获得焦点</span><br><span class="line">        onEditorFocus(editor) &#123;&#125;,</span><br><span class="line">        // 开始</span><br><span class="line">        onEditorReady(editor) &#123;&#125;,</span><br><span class="line">        // 值发生变化</span><br><span class="line">        onEditorChange(editor) &#123;</span><br><span class="line">          console.log(&quot;change!&quot;);</span><br><span class="line">        &#125;,</span><br><span class="line">        show(editor)&#123;</span><br><span class="line">          console.log(this.content);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;,</span><br><span class="line">      computed: &#123;</span><br><span class="line">        editor() &#123;</span><br><span class="line">          return this.$refs.myTextEditor.quillEditor;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;,</span><br><span class="line">      mounted() &#123;</span><br><span class="line">        // console.log(&#x27;this is my editor&#x27;,this.editor);</span><br><span class="line">      &#125; </span><br><span class="line">    &#125;</span><br><span class="line">  &lt;/script&gt;</span><br><span class="line">&lt;style&gt;</span><br><span class="line">.ql-container &#123;</span><br><span class="line">  min-height: 400px;</span><br><span class="line">&#125;</span><br><span class="line">.container&#123;</span><br><span class="line">  width: 70%;</span><br><span class="line">  border: 1px red solid;</span><br><span class="line">&#125;</span><br><span class="line">.container1&#123;</span><br><span class="line">  width: 70%;</span><br><span class="line">  border: 1px red solid;</span><br><span class="line">  height: 300px;</span><br><span class="line">&#125;</span><br><span class="line">.border&#123;</span><br><span class="line">  width: 30px;</span><br><span class="line">  height: 30px;</span><br><span class="line">  border: 1px red solid;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-自定义字体"><a href="#4-自定义字体" class="headerlink" title="4.自定义字体"></a>4.自定义字体</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;div class=&quot;container&quot;&gt;</span><br><span class="line">      &lt;quill-editor class=&quot;ql-container&quot;</span><br><span class="line">                    ref=&quot;myTextEditor&quot;</span><br><span class="line">                    v-model=&quot;content&quot;</span><br><span class="line">                    :options=&quot;editorOption&quot;</span><br><span class="line">                    @blur=&quot;onEditorBlur($event)&quot;</span><br><span class="line">                    @focus=&quot;onEditorFocus($event)&quot;</span><br><span class="line">                    @ready=&quot;onEditorReady($event)&quot;</span><br><span class="line">                    @change=&quot;onEditorChange($event)&quot;&gt;</span><br><span class="line">      &lt;/quill-editor&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;button @click=&quot;show&quot;&gt;展示文本内容&lt;/button&gt;</span><br><span class="line">    &lt;!-- 回显获取的数据 --&gt;</span><br><span class="line">    &lt;div class=&quot;ql-snow container1&quot;&gt;</span><br><span class="line">      &lt;div class=&quot;ql-editor&quot; v-html=&quot;data&quot; v-highlight&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">  import java from &#x27;highlight.js&#x27;;</span><br><span class="line">  import &#123; quillEditor,Quill &#125; from &quot;vue-quill-editor&quot;;</span><br><span class="line">  //设置字体大小</span><br><span class="line">  let fontSizeStyle=Quill.import(&#x27;attributors/style/size&#x27;) //引入这个后会把样式写在style上</span><br><span class="line">  fontSizeStyle.whitelist=[&#x27;45px&#x27;,&#x27;60px&#x27;,&#x27;90px&#x27;]</span><br><span class="line">  Quill.register(fontSizeStyle,true)</span><br><span class="line">  //设置字体样式</span><br><span class="line">  let Font = Quill.import(&#x27;attributors/style/font&#x27;) //引入这个后会把样式写在style上</span><br><span class="line">  let fonts = [false, &#x27;SimSun&#x27;, &#x27;SimHei&#x27;,&#x27;Microsoft-YaHei&#x27;,&#x27;KaiTi&#x27;,&#x27;FangSong&#x27;,&#x27;Arial&#x27;]</span><br><span class="line">  Font.whitelist = fonts //将字体加入到白名单</span><br><span class="line">  Quill.register(Font, true)</span><br><span class="line">  export default &#123;</span><br><span class="line">    data () &#123;</span><br><span class="line">      return &#123;</span><br><span class="line">        data:`&lt;pre class=&quot;ql-syntax&quot; spellcheck=&quot;false&quot;&gt;&lt;span class=&quot;hljs-function&quot;&gt;&lt;span class=&quot;hljs-keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;hljs-keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;hljs-keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;hljs-title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;hljs-params&quot;&gt;(&lt;span class=&quot;hljs-keyword&quot;&gt;String&lt;/span&gt;[] args)&lt;/span&gt;&lt;/span&gt;&#123;</span><br><span class="line">    System.out.&lt;span class=&quot;hljs-built_in&quot;&gt;println&lt;/span&gt;(&lt;span class=&quot;hljs-string&quot;&gt;&quot;hello,world&quot;&lt;/span&gt;);</span><br><span class="line">&#125;</span><br><span class="line">&lt;/pre&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;h1 class=&quot;ql-indent-1&quot;&gt;&lt;strong style=&quot;font-family: KaiTi;&quot;&gt;测试富文本编辑器&lt;/strong&gt;&lt;/h1&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(230, 0, 0);&quot;&gt;ABCD&lt;/span&gt;&lt;span style=&quot;color: rgb(230, 0, 0); font-family: KaiTi;&quot;&gt;&lt;span class=&quot;ql-cursor&quot;&gt;﻿&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;`,</span><br><span class="line">        content: null,</span><br><span class="line">        editorOption: &#123;</span><br><span class="line">          modules: &#123;</span><br><span class="line">            toolbar: [</span><br><span class="line">              [&quot;bold&quot;, &quot;italic&quot;, &quot;underline&quot;, &quot;strike&quot;], // 加粗 斜体 下划线 删除线</span><br><span class="line">              [&quot;blockquote&quot;, &quot;code-block&quot;], // 引用  代码块</span><br><span class="line">              [&#123; header: 1 &#125;, &#123; header: 2 &#125;], // 1、2 级标题</span><br><span class="line">              [&#123; list: &quot;ordered&quot; &#125;, &#123; list: &quot;bullet&quot; &#125;], // 有序、无序列表</span><br><span class="line">              [&#123; script: &quot;sub&quot; &#125;, &#123; script: &quot;super&quot; &#125;], // 上标/下标</span><br><span class="line">              [&#123; indent: &quot;-1&quot; &#125;, &#123; indent: &quot;+1&quot; &#125;], // 缩进</span><br><span class="line">              // [&#123;&#x27;direction&#x27;: &#x27;rtl&#x27;&#125;],                         // 文本方向</span><br><span class="line">              [&#123; size: [&#x27;45px&#x27;,&#x27;60px&#x27;,&#x27;90px&#x27;] &#125;], // 字体大小</span><br><span class="line">              [&#123; header: [1, 2, 3, 4, 5, 6, false] &#125;], // 标题</span><br><span class="line">              [&#123; color: [] &#125;, &#123; background: [] &#125;], // 字体颜色、字体背景颜色</span><br><span class="line">              [&#123; font:  [&#x27;SimSun&#x27;, &#x27;SimHei&#x27;,&#x27;Microsoft-YaHei&#x27;,&#x27;KaiTi&#x27;,&#x27;FangSong&#x27;,&#x27;Arial&#x27;]&#125;], // 字体种类</span><br><span class="line">              [&#123; align: [] &#125;], // 对齐方式</span><br><span class="line">              [&quot;clean&quot;], // 清除文本格式</span><br><span class="line">              //[&quot;link&quot;, &quot;image&quot;, &quot;video&quot;] // 链接、图片、视频</span><br><span class="line">            ], //工具菜单栏配置</span><br><span class="line">            syntax:&#123;</span><br><span class="line">              //语法高亮</span><br><span class="line">              highlight:text =&gt;&#123;</span><br><span class="line">                return java.highlightAuto(text).value </span><br><span class="line">              &#125;</span><br><span class="line">            &#125;</span><br><span class="line">          &#125;,</span><br><span class="line">          placeholder: &#x27;请在这里添加产品描述&#x27;, //提示</span><br><span class="line">          readyOnly: false, //是否只读</span><br><span class="line">          theme: &#x27;snow&#x27;, //主题 snow/bubble</span><br><span class="line">          syntax: true, //语法检测</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    methods: &#123;</span><br><span class="line">      // 失去焦点</span><br><span class="line">      onEditorBlur(editor) &#123;&#125;,</span><br><span class="line">      // 获得焦点</span><br><span class="line">      onEditorFocus(editor) &#123;&#125;,</span><br><span class="line">      // 开始</span><br><span class="line">      onEditorReady(editor) &#123;&#125;,</span><br><span class="line">      // 值发生变化</span><br><span class="line">      onEditorChange(editor) &#123;</span><br><span class="line">        console.log(&quot;change!&quot;);</span><br><span class="line">      &#125;,</span><br><span class="line">      show(editor)&#123;</span><br><span class="line">        console.log(this.content);</span><br><span class="line">        alert(this.content);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    computed: &#123;</span><br><span class="line">      editor() &#123;</span><br><span class="line">        return this.$refs.myTextEditor.quillEditor;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    mounted() &#123;</span><br><span class="line">      // console.log(&#x27;this is my editor&#x27;,this.editor);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style&gt;</span><br><span class="line">.ql-container &#123;</span><br><span class="line">  min-height: 400px;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br><span class="line">&lt;style scoped&gt;</span><br><span class="line">.container&#123;</span><br><span class="line">  width: 70%;</span><br><span class="line">  border: 1px red solid;</span><br><span class="line">&#125;</span><br><span class="line">.container1&#123;</span><br><span class="line">  width: 70%;</span><br><span class="line">  border: 1px red solid;</span><br><span class="line">  height: 300px;</span><br><span class="line">&#125;</span><br><span class="line">.border&#123;</span><br><span class="line">  width: 30px;</span><br><span class="line">  height: 30px;</span><br><span class="line">  border: 1px red solid;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/*这里一定要写上，是用来把相关改变的配置在工具栏正常显示如果不写，字体样式的下拉会重复显示Sans Serif，字体大小的下拉会重复显示Normal*/.quill-editor &gt;&gt;&gt; .ql-picker.ql-font .ql-picker-label[data-value=SimSun]::before,</span><br><span class="line">.quill-editor &gt;&gt;&gt; .ql-picker.ql-font .ql-picker-item[data-value=SimSun]::before &#123;</span><br><span class="line">  content: &quot;宋体&quot;;</span><br><span class="line">  font-family: &quot;SimSun&quot;!important;</span><br><span class="line">&#125;</span><br><span class="line">.quill-editor &gt;&gt;&gt; .ql-picker.ql-font .ql-picker-label[data-value=SimHei]::before,</span><br><span class="line">.quill-editor &gt;&gt;&gt; .ql-picker.ql-font .ql-picker-item[data-value=SimHei]::before &#123;</span><br><span class="line">  content: &quot;黑体&quot;;</span><br><span class="line">  font-family: &quot;SimHei&quot;;</span><br><span class="line">&#125;</span><br><span class="line">.quill-editor &gt;&gt;&gt; .ql-picker.ql-font .ql-picker-label[data-value=Microsoft-YaHei]::before,</span><br><span class="line">.quill-editor &gt;&gt;&gt; .ql-picker.ql-font .ql-picker-item[data-value=Microsoft-YaHei]::before &#123;</span><br><span class="line">  content: &quot;微软雅黑&quot;;</span><br><span class="line">  font-family: &quot;Microsoft YaHei&quot;;</span><br><span class="line">&#125;</span><br><span class="line">.quill-editor &gt;&gt;&gt; .ql-picker.ql-font .ql-picker-label[data-value=KaiTi]::before,</span><br><span class="line">.quill-editor &gt;&gt;&gt; .ql-picker.ql-font .ql-picker-item[data-value=KaiTi]::before &#123;</span><br><span class="line">  content: &quot;楷体&quot;;</span><br><span class="line">  font-family: &quot;KaiTi&quot;!important;</span><br><span class="line">&#125;</span><br><span class="line">.quill-editor &gt;&gt;&gt; .ql-picker.ql-font .ql-picker-label[data-value=FangSong]::before,</span><br><span class="line">.quill-editor &gt;&gt;&gt; .ql-picker.ql-font .ql-picker-item[data-value=FangSong]::before &#123;</span><br><span class="line">  content: &quot;仿宋&quot;;</span><br><span class="line">  font-family: &quot;FangSong&quot;;</span><br><span class="line">&#125;</span><br><span class="line">.quill-editor &gt;&gt;&gt; .ql-snow .ql-picker.ql-size .ql-picker-label[data-value=&#x27;45px&#x27;]::before, </span><br><span class="line">.quill-editor &gt;&gt;&gt; .ql-snow .ql-picker.ql-size .ql-picker-item[data-value=&#x27;45px&#x27;]::before &#123;</span><br><span class="line">    content: &#x27;45px&#x27;;</span><br><span class="line">&#125;</span><br><span class="line">.quill-editor &gt;&gt;&gt; .ql-snow .ql-picker.ql-size .ql-picker-label[data-value=&#x27;60px&#x27;]::before, </span><br><span class="line">.quill-editor &gt;&gt;&gt; .ql-snow .ql-picker.ql-size .ql-picker-item[data-value=&#x27;60px&#x27;]::before &#123;</span><br><span class="line">    content: &#x27;60px&#x27;;</span><br><span class="line">&#125;</span><br><span class="line">.quill-editor &gt;&gt;&gt; .ql-snow .ql-picker.ql-size .ql-picker-label[data-value=&#x27;90px&#x27;]::before, </span><br><span class="line">.quill-editor &gt;&gt;&gt; .ql-snow .ql-picker.ql-size .ql-picker-item[data-value=&#x27;90px&#x27;]::before &#123;</span><br><span class="line">    content: &#x27;90px&#x27;;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
 
   </div>
   
+  
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
+      
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+      <!-- 打赏组件 -->
+      
+    </div>
   
   
     
@@ -2483,7 +2511,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-05-14T22:58:40+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-05-14T22:44:45+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：May 14, 2024</p>
@@ -2505,7 +2533,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/about/index.html&title=about - Hexo&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/VueQuillEditor-note/&title=VueQuillEditor用法笔记 - Hexo&summary="
           
           >
           
@@ -2517,7 +2545,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/about/index.html&title=about - Hexo&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/VueQuillEditor-note/&title=VueQuillEditor用法笔记 - Hexo&summary="
           
           >
           
@@ -2529,7 +2557,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/about/index.html&title=about - Hexo&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/VueQuillEditor-note/&title=VueQuillEditor用法笔记 - Hexo&summary="
           
           >
           
@@ -2560,6 +2588,36 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
 
   
+    <div class="prev-next">
+      
+        <a class='prev' href='/selenium-note/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Selenium用法</p>
+          <p class='content'>1.下载驱动查看Chrome浏览器版本：chrome:&#x2F;&#x2F;version&#x2F;
+下载地址：https://chromedriver.storage.googleapis...</p>
+        </a>
+      
+      
+        <a class='next' href='/sql-note/'>
+          <p class='title'>数据库复习笔记<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>1.关系代数1.1并、交、差
+  
+    关系S1
+  
+  
+    Sno
+    Sname
+    Sdept
+  
+  
+    0001
+    Mary
+    IS
+  
+  ...</p>
+        </a>
+      
+    </div>
+  
   <!-- Custom Files postEnd begin-->
   
   <!-- Custom Files postEnd end-->
@@ -2586,9 +2644,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
 
 
-  <div class="">
-    <!-- pjax占位 -->
-  </div>
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%85"><span class="toc-text">1.安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-main-js"><span class="toc-text">2.main.js</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E4%BD%BF%E7%94%A8"><span class="toc-text">3.使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E4%BD%93"><span class="toc-text">4.自定义字体</span></a></li></ol>
+    </div>
+  </section>
 
   
 
@@ -2642,7 +2710,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -3153,7 +3221,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"lzy","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Hexo"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"http://example.com/","keywords":null,"description":"blog","author":{"@type":"Person","name":"lzy","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"blog"},"publisher":{"@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"about","description":"blog","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/about/index.html"},"author":{"@type":"Person","name":"lzy","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/about/index.html","wordCount":0,"datePublished":"2024-05-14T12:48:48.000Z","dateModified":"2024-05-14T14:58:40.081Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"lzy","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Hexo"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/前端/","name":"前端"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/VueQuillEditor-note/","name":"VueQuillEditor用法笔记"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"http://example.com/","keywords":null,"description":"blog","author":{"@type":"Person","name":"lzy","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"blog"},"publisher":{"@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"VueQuillEditor用法笔记","description":"blog","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/VueQuillEditor-note/"},"author":{"@type":"Person","name":"lzy","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/VueQuillEditor-note/","wordCount":0,"datePublished":"2022-09-17T20:01:02.000Z","dateModified":"2024-05-14T14:44:45.000Z","articleSection":"前端","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

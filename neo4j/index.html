@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://example.com/about/"/>
+  <link rel="canonical" href="http://example.com/neo4j/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -33,19 +33,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>about - Hexo</title>
+  <title>Neo4j学习笔记 - Hexo</title>
   <meta name="keywords" content="null">
   <meta desc name="description" content="blog - lzy - Hexo">
   
-<meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="http://example.com/about/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Neo4j学习笔记">
+<meta property="og:url" content="http://example.com/neo4j/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="我印象最深刻的一句话是：有病就去治 请允许我载着理发店">
+<meta property="og:description" content="1.图数据库基于图论实现的一种NoSQL数据库，其数据存储结构和查询方式都是以图论为基础的，图数据库主要用于存储更多的连接数据。 NoSQL数据库大致可分为四种   分类 数据模型 优势 劣势 julio   键值数据库 哈希表 查找速度快 数据无结构化，通常只被当作字符串或二进制数据 Redis   列存储数据库 列式数据存储 查找速度快，支持分布横向扩展，数据压缩率高 功能相对受限 HBase">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2024-05-14T12:48:48.000Z">
-<meta property="article:modified_time" content="2024-05-14T14:58:40.081Z">
+<meta property="article:published_time" content="2023-04-16T13:44:43.000Z">
+<meta property="article:modified_time" content="2024-05-14T14:17:53.228Z">
 <meta property="article:author" content="lzy">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -2339,7 +2339,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class='cover-wrapper page dock' style="display: none;">
+      <div id="none" class='cover-wrapper post dock' style="display: none;">
         
   <div class='cover-bg lazyload placeholder' data-bg="https://gcore.jsdelivr.net/gh/MHG-LAB/cron@gh-pages/bing/bing.jpg"></div>
 
@@ -2400,8 +2400,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper">
           
 <div id="l_main" class=''>
-  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-page" id="page" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://example.com/about/index.html">
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="http://example.com/neo4j/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Hexo">
   </span>
@@ -2422,7 +2422,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        about
+        Neo4j学习笔记
       </h1>
       <div class='new-meta-box'>
         
@@ -2439,14 +2439,24 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/Java/">Java</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/Java/" itemprop="url"><span itemprop="name">Java</span></a>
+      </span>
+    
+  </div>
+
 
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-05-14T20:48:48+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-04-16T21:44:43+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：May 14, 2024</p>
+    <p>发布于：Apr 16, 2023</p>
   </a>
 </div>
 
@@ -2469,11 +2479,153 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>我印象最深刻的一句话是：有病就去治</p>
-<p>请允许我载着理发店</p>
+    <h2 id="1-图数据库"><a href="#1-图数据库" class="headerlink" title="1.图数据库"></a>1.图数据库</h2><p>基于图论实现的一种NoSQL数据库，其数据存储结构和查询方式都是以图论为基础的，图数据库主要用于存储更多的连接数据。</p>
+<p>NoSQL数据库大致可分为四种</p>
+<table>
+<tr align="center">
+<th>分类</th>
+<th>数据模型</th>
+<th>优势</th>
+<th>劣势</th>
+<th>julio</th>
+</tr>
+<tr>
+<td>键值数据库</td>
+<td>哈希表</td>
+<td>查找速度快</td>
+<td>数据无结构化，通常只被当作字符串或二进制数据</td>
+<td>Redis</td>
+</tr>
+<tr>
+<td>列存储数据库</td>
+<td>列式数据存储</td>
+<td>查找速度快，支持分布横向扩展，数据压缩率高</td>
+<td>功能相对受限</td>
+<td>HBase</td>
+</tr>
+<tr>
+<td>文档型数据库</td>
+<td>键值对扩展</td>
+<td>数据要求不严格，表结构可变，不需要预定义表结构</td>
+<td>查询性能不高，缺乏统一的查询语法</td>
+<td>MongoDB</td>
+</tr>
+<tr>
+<td>图数据库</td>
+<td>节点和关系组成的图</td>
+<td>利用图结构相关算法</td>
+<td>可能需要对整个图做计算，不利于图数据分布存储</td>
+<td>Neo4j、janusGraph</td>
+</tr>
+</table>
+
+
+<h3 id="1-1属性图模型"><a href="#1-1属性图模型" class="headerlink" title="1.1属性图模型"></a>1.1属性图模型</h3><p>Neo4j图数据库遵循属性图模型来存储和管理其数据</p>
+<p>属性图模型规则</p>
+<ul>
+<li>表示节点，关系和属性中的数据</li>
+<li>节点和关系都包含属性</li>
+<li>关系连结节点</li>
+<li>属性是键值对</li>
+<li>节点用圆圈表示，关系用方向键表示</li>
+<li>关系具有方向：单向和双向</li>
+<li>每个关系包含“开始节点”或“从节点”和“结束节点”或“到节点”</li>
+</ul>
+<h2 id="2-安装neo4j"><a href="#2-安装neo4j" class="headerlink" title="2.安装neo4j"></a>2.安装neo4j</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">解压压缩版，3.几的版本要求jdk8,4.几的要求jdk11</span></span><br><span class="line">tar -zxvf neo4j-community-3.5.28-unix.tar.gz</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">将Neo4j作为控制台应用程序运行</span></span><br><span class="line">&lt;NEO4J_HOME&gt;/bin/neo4j console</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">将Neo4j作为服务进行安装</span></span><br><span class="line">&lt;NEO4J_HOME&gt;/bin/neo4j install-service</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">浏览器访问http://localhost:7474/，初始帐号密码均为neo4j</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="3-Neo4j-CQL使用"><a href="#3-Neo4j-CQL使用" class="headerlink" title="3.Neo4j - CQL使用"></a>3.Neo4j - CQL使用</h2><p>Neo4j的Cypher语言是为处理图形数据而构建的，CQL代表Cypher查询语言。</p>
+<table>
+<tr align="center">
+<th>CQL命令</th>
+<th>用法</th>
+</tr>
+<tr align="center">
+<td>CREATE</td>
+<td>创建节点、关系和属性</td>
+</tr>
+<tr align="center">
+<td>MATCH</td>
+<td>检索有关节点、关系和属性数据</td>
+</tr>
+<tr align="center">
+<td>RETURN</td>
+<td>返回查询结果</td>
+</tr>
+<tr align="center">
+<td>WHERE</td>
+<td>提供条件过滤检索数据</td>
+</tr>
+<tr align="center">
+<td>DELETE</td>
+<td>删除节点和关系</td>
+</tr>
+<tr align="center">
+<td>REMOVE</td>
+<td>删除节点和关系的属性</td>
+</tr>
+<tr align="center">
+<td>ORDER BY</td>
+<td>排序检索数据</td>
+</tr>
+<tr align="center">
+<td>SET</td>
+<td>添加或更新标签</td>
+</tr>
+</table>
+### 3.1CREATE
+
+<p>创建节点及节点间的关系</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">//&lt;node-name&gt;为别名，只限该查询语句中使用可省略，&lt;lable-name&gt;为节点标签名称</span><br><span class="line">CREATE (&lt;node-name&gt;:&lt;lable-name&gt;)</span><br><span class="line">//创建带属性值的节点</span><br><span class="line">CREATE (</span><br><span class="line">    &lt;node-name&gt;:&lt;lable-name&gt;</span><br><span class="line">    &#123;</span><br><span class="line">    	&lt;Property1-name&gt;:&lt;Property1-Value&gt;\</span><br><span class="line">    	......</span><br><span class="line">    	&lt;Property2-name&gt;:&lt;Property2-Value&gt;</span><br><span class="line">    &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-2MATCH"><a href="#3-2MATCH" class="headerlink" title="3.2MATCH"></a>3.2MATCH</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//查询Student下的内容</span><br><span class="line">MATCH(stu:student)</span><br><span class="line">RETURN stu</span><br><span class="line">//查询STudent标签下name为李畅的内容</span><br><span class="line">MATCH(stu:student)</span><br><span class="line">WHERE stu.name=&#x27;李畅&#x27;</span><br><span class="line">RETURN stu</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-3关系"><a href="#3-3关系" class="headerlink" title="3.3关系"></a>3.3关系</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">//创建节点及其关系</span><br><span class="line">CREATE (&lt;node1-name&gt;:&lt;label1-name&gt;)-</span><br><span class="line">	[&lt;relationship-name&gt;:&lt;relationship-label-name&gt;]</span><br><span class="line">	-&gt;(&lt;node2-name&gt;:&lt;label2-name&gt;)</span><br><span class="line">//例如节点及单个关系</span><br><span class="line">CREATE(stu1:student&#123;id:1,name:&#x27;康弘&#x27;,age:20&#125;)-[r:friend]-&gt;(stu2:student&#123;id:2,name:&#x27;赵沛增&#x27;,age:21&#125;)</span><br><span class="line">//创建节点及多个关系</span><br><span class="line">CREATE(stu1:student&#123;id:1,name:&#x27;李畅&#x27;,age:20&#125;),(stu2:student&#123;id:2,name:&#x27;刘智宇&#x27;,age:21&#125;),</span><br><span class="line">(stu1)-[:father]-&gt;(stu2),(stu2)-[:son]-&gt;(stu1)</span><br><span class="line">//为已经存在的节点添加关系</span><br><span class="line">MATCH(stu1:student&#123;id:1,name:&#x27;李畅&#x27;,age:20&#125;),(stu2:student&#123;id:2,name:&#x27;刘智宇&#x27;,age:21&#125;)</span><br><span class="line">CREATE (stu1)-[:father]-&gt;(stu2),(stu1)&lt;-[:son]-(stu2)</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-4DELETE"><a href="#3-4DELETE" class="headerlink" title="3.4DELETE"></a>3.4DELETE</h3><p>删除节点及节点间的关系，一般配和MATCH使用</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">//删除所有节点及关系</span><br><span class="line">MATCH p = ()--&gt;()</span><br><span class="line">DELETE p</span><br><span class="line">//删除两个节点间的全部关系</span><br><span class="line">MATCH (stu1:student&#123;name:&#x27;刘智宇&#x27;&#125;)-[r]-(stu2:student&#123;name:&#x27;李畅&#x27;&#125;)</span><br><span class="line">DELETE r</span><br><span class="line">//删除两个节点的指定类型的关系</span><br><span class="line">MATCH (stu1:student&#123;name:&#x27;刘智宇&#x27;&#125;)-[r:son]-(stu2:student&#123;name:&#x27;李畅&#x27;&#125;)</span><br><span class="line">DELETE r</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-5REMOVE"><a href="#3-5REMOVE" class="headerlink" title="3.5REMOVE"></a>3.5REMOVE</h3><ul>
+<li><p>删除节点或关系的标签</p>
+</li>
+<li><p>删除节点或关系的属性</p>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//删除节点的属性</span><br><span class="line">MATCH(book:Book)</span><br><span class="line">REMOVE book.name,book.price</span><br><span class="line">//删除节点</span><br><span class="line">MATCH(book:Book)</span><br><span class="line">REMOVE book:tool,book:Book</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-springboot整合neo4j"><a href="#4-springboot整合neo4j" class="headerlink" title="4.springboot整合neo4j"></a>4.springboot整合neo4j</h2><h3 id="4-1引入依赖"><a href="#4-1引入依赖" class="headerlink" title="4.1引入依赖"></a>4.1引入依赖</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-data-neo4j<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="4-2编写配置"><a href="#4-2编写配置" class="headerlink" title="4.2编写配置"></a>4.2编写配置</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">data:</span></span><br><span class="line">    <span class="attr">neo4j:</span></span><br><span class="line">      <span class="attr">uri:</span> <span class="string">bolt://localhost:7687</span></span><br><span class="line">      <span class="attr">username:</span> <span class="string">neo4j</span></span><br><span class="line">      <span class="attr">password:</span> <span class="number">123456</span></span><br></pre></td></tr></table></figure>
+
+<p>4.3实体类和关系类</p>
+<p>Student.java</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> org.study.bean;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> lombok.Data;</span><br><span class="line"><span class="keyword">import</span> org.neo4j.ogm.annotation.GeneratedValue;</span><br><span class="line"><span class="keyword">import</span> org.neo4j.ogm.annotation.Id;</span><br><span class="line"><span class="keyword">import</span> org.neo4j.ogm.annotation.NodeEntity;</span><br><span class="line"><span class="keyword">import</span> org.neo4j.ogm.annotation.Property;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="meta">@NodeEntity(label = &quot;student&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Student</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Id</span></span><br><span class="line">    <span class="meta">@GeneratedValue</span></span><br><span class="line">    <span class="keyword">private</span> Long id;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Property</span></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Property</span></span><br><span class="line">    <span class="keyword">private</span> Integer age;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Student</span><span class="params">(String name, Integer age)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.name = name;</span><br><span class="line">        <span class="built_in">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>StudentRelationship.java</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> org.study.bean;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> lombok.Data;</span><br><span class="line"><span class="keyword">import</span> org.neo4j.ogm.annotation.*;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="meta">@RelationshipEntity(type = &quot;室友&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">StudentRelationship</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Id</span></span><br><span class="line">    <span class="meta">@GeneratedValue</span></span><br><span class="line">    <span class="keyword">private</span> Long id;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@StartNode</span></span><br><span class="line">    <span class="keyword">private</span> Student start;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@EndNode</span></span><br><span class="line">    <span class="keyword">private</span> Student end;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">StudentRelationship</span><span class="params">(Student start, Student end)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.start = start;</span><br><span class="line">        <span class="built_in">this</span>.end = end;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-4Repository接口"><a href="#4-4Repository接口" class="headerlink" title="4.4Repository接口"></a>4.4Repository接口</h3><p>StudentRelationshipRepository.java</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> org.study.dao;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.data.neo4j.annotation.Query;</span><br><span class="line"><span class="keyword">import</span> org.springframework.data.neo4j.repository.Neo4jRepository;</span><br><span class="line"><span class="keyword">import</span> org.springframework.data.repository.query.Param;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Repository;</span><br><span class="line"><span class="keyword">import</span> org.study.bean.StudentRelationship;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Repository</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">StudentRelationshipRepository</span> <span class="keyword">extends</span> <span class="title class_">Neo4jRepository</span>&lt;StudentRelationship,Long&gt;&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//自定义语句</span></span><br><span class="line">    <span class="meta">@Query(&quot;MATCH(stu1:student&#123;name:&#123;from&#125;&#125;),(stu2:student&#123;name:&#123;to&#125;&#125;)CREATE(stu1)-[:室友]-&gt;(stu2)&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">createRelationship</span><span class="params">(<span class="meta">@Param(&quot;from&quot;)</span>String from,<span class="meta">@Param(&quot;to&quot;)</span>String to)</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>StudentRepository.java</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> org.study.dao;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.data.neo4j.repository.Neo4jRepository;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Repository;</span><br><span class="line"><span class="keyword">import</span> org.study.bean.Student;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Repository</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">StudentRepository</span> <span class="keyword">extends</span> <span class="title class_">Neo4jRepository</span>&lt;Student,Long&gt; &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-5测试代码"><a href="#4-5测试代码" class="headerlink" title="4.5测试代码"></a>4.5测试代码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> org.study.controller;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.alibaba.fastjson.JSON;</span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Controller;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RequestMapping;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RequestMethod;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.ResponseBody;</span><br><span class="line"><span class="keyword">import</span> org.study.bean.Student;</span><br><span class="line"><span class="keyword">import</span> org.study.bean.StudentRelationship;</span><br><span class="line"><span class="keyword">import</span> org.study.dao.StudentRelationshipRepository;</span><br><span class="line"><span class="keyword">import</span> org.study.dao.StudentRepository;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Optional;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Controller</span></span><br><span class="line"><span class="meta">@ResponseBody</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TestController</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> StudentRepository studentRepository;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> StudentRelationshipRepository relationshipRepository;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@RequestMapping(value = &quot;/api/match-service/test&quot;,method = RequestMethod.POST,produces = &quot;application/json;charset=utf-8&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">test</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="comment">//查找节点</span></span><br><span class="line">        Optional&lt;Student&gt; result =studentRepository.findById(<span class="number">7L</span>);</span><br><span class="line">        <span class="comment">//创建节点</span></span><br><span class="line">        <span class="type">Student</span> <span class="variable">student</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Student</span>(<span class="string">&quot;郝靖东&quot;</span>,<span class="number">22</span>);</span><br><span class="line">        <span class="type">Student</span> <span class="variable">student1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Student</span>(<span class="string">&quot;黄俊威&quot;</span>,<span class="number">21</span>);</span><br><span class="line">        studentRepository.save(student);</span><br><span class="line">        studentRepository.save(student1);</span><br><span class="line">        <span class="comment">//搭建关系</span></span><br><span class="line">        <span class="type">StudentRelationship</span> <span class="variable">relationship</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StudentRelationship</span>(student,student1);</span><br><span class="line">        <span class="comment">//第一种方式</span></span><br><span class="line">        relationshipRepository.save(relationship);</span><br><span class="line">        <span class="comment">//第二种方式</span></span><br><span class="line">        relationshipRepository.createRelationship(<span class="string">&quot;黄俊威&quot;</span>,<span class="string">&quot;郝靖东&quot;</span>);</span><br><span class="line">        <span class="comment">//删除节点</span></span><br><span class="line">        studentRepository.deleteById(<span class="number">8L</span>);</span><br><span class="line">        <span class="keyword">return</span> JSON.toJSONString(result.get());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
   </div>
   
+  
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
+      
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+      <!-- 打赏组件 -->
+      
+    </div>
   
   
     
@@ -2483,7 +2635,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-05-14T22:58:40+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-05-14T22:17:53+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：May 14, 2024</p>
@@ -2505,7 +2657,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/about/index.html&title=about - Hexo&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/neo4j/&title=Neo4j学习笔记 - Hexo&summary="
           
           >
           
@@ -2517,7 +2669,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/about/index.html&title=about - Hexo&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/neo4j/&title=Neo4j学习笔记 - Hexo&summary="
           
           >
           
@@ -2529,7 +2681,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/about/index.html&title=about - Hexo&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/neo4j/&title=Neo4j学习笔记 - Hexo&summary="
           
           >
           
@@ -2560,6 +2712,25 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
 
   
+    <div class="prev-next">
+      
+        <a class='prev' href='/nginx-chatgpt-proxy/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Nginx配置chatgpt代理</p>
+          <p class='content'>1.安装nginxnginx下载地址：http://nginx.org/en/download.html
+123456789101112#解压文件tar zxvf nginx-1.18.0.ta...</p>
+        </a>
+      
+      
+        <a class='next' href='/rabbitmq-note/'>
+          <p class='title'>RabbitMQ用法笔记<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>1.RabbitMQAMQP，即Advanced Message Queuing Protocol，是一个网络协议，是应用层协议的一个开放标准
+
+Broker：接收和分发消息的应用
+Virtua...</p>
+        </a>
+      
+    </div>
+  
   <!-- Custom Files postEnd begin-->
   
   <!-- Custom Files postEnd end-->
@@ -2586,9 +2757,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
 
 
-  <div class="">
-    <!-- pjax占位 -->
-  </div>
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%9B%BE%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">1.图数据库</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1%E5%B1%9E%E6%80%A7%E5%9B%BE%E6%A8%A1%E5%9E%8B"><span class="toc-text">1.1属性图模型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%AE%89%E8%A3%85neo4j"><span class="toc-text">2.安装neo4j</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Neo4j-CQL%E4%BD%BF%E7%94%A8"><span class="toc-text">3.Neo4j - CQL使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2MATCH"><span class="toc-text">3.2MATCH</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3%E5%85%B3%E7%B3%BB"><span class="toc-text">3.3关系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4DELETE"><span class="toc-text">3.4DELETE</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5REMOVE"><span class="toc-text">3.5REMOVE</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-springboot%E6%95%B4%E5%90%88neo4j"><span class="toc-text">4.springboot整合neo4j</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1%E5%BC%95%E5%85%A5%E4%BE%9D%E8%B5%96"><span class="toc-text">4.1引入依赖</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2%E7%BC%96%E5%86%99%E9%85%8D%E7%BD%AE"><span class="toc-text">4.2编写配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4Repository%E6%8E%A5%E5%8F%A3"><span class="toc-text">4.4Repository接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-5%E6%B5%8B%E8%AF%95%E4%BB%A3%E7%A0%81"><span class="toc-text">4.5测试代码</span></a></li></ol></li></ol>
+    </div>
+  </section>
 
   
 
@@ -2642,7 +2823,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -3153,7 +3334,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"lzy","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Hexo"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"http://example.com/","keywords":null,"description":"blog","author":{"@type":"Person","name":"lzy","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"blog"},"publisher":{"@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"about","description":"blog","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/about/index.html"},"author":{"@type":"Person","name":"lzy","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/about/index.html","wordCount":0,"datePublished":"2024-05-14T12:48:48.000Z","dateModified":"2024-05-14T14:58:40.081Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"lzy","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Hexo"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/Java/","name":"Java"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/neo4j/","name":"Neo4j学习笔记"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"http://example.com/","keywords":null,"description":"blog","author":{"@type":"Person","name":"lzy","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"blog"},"publisher":{"@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Neo4j学习笔记","description":"blog","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/neo4j/"},"author":{"@type":"Person","name":"lzy","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/neo4j/","wordCount":0,"datePublished":"2023-04-16T13:44:43.000Z","dateModified":"2024-05-14T14:17:53.228Z","articleSection":"Java","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

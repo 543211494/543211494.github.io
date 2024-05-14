@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://example.com/about/"/>
+  <link rel="canonical" href="http://example.com/flex-note/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -33,19 +33,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>about - Hexo</title>
+  <title>Flex弹性盒子用法 - Hexo</title>
   <meta name="keywords" content="null">
   <meta desc name="description" content="blog - lzy - Hexo">
   
-<meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="http://example.com/about/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Flex弹性盒子用法">
+<meta property="og:url" content="http://example.com/flex-note/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="我印象最深刻的一句话是：有病就去治 请允许我载着理发店">
+<meta property="og:description" content="1.Flex布局Flex常用属性  flex-direction flex-wrap flew-flow justify-content align-items align-content  容器默认存在两根轴：水平的主轴（main axis）和垂直的交叉轴（cross axis）。主轴的开始位置（与边框的交叉点）叫做main start，结束位置叫做main end；交叉轴的开始位置叫做cros">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2024-05-14T12:48:48.000Z">
-<meta property="article:modified_time" content="2024-05-14T14:58:40.081Z">
+<meta property="article:published_time" content="2023-02-02T08:45:20.000Z">
+<meta property="article:modified_time" content="2024-05-14T13:58:34.247Z">
 <meta property="article:author" content="lzy">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -2339,7 +2339,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class='cover-wrapper page dock' style="display: none;">
+      <div id="none" class='cover-wrapper post dock' style="display: none;">
         
   <div class='cover-bg lazyload placeholder' data-bg="https://gcore.jsdelivr.net/gh/MHG-LAB/cron@gh-pages/bing/bing.jpg"></div>
 
@@ -2400,8 +2400,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper">
           
 <div id="l_main" class=''>
-  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-page" id="page" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://example.com/about/index.html">
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="http://example.com/flex-note/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Hexo">
   </span>
@@ -2422,7 +2422,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        about
+        Flex弹性盒子用法
       </h1>
       <div class='new-meta-box'>
         
@@ -2439,14 +2439,24 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url"><span itemprop="name">前端</span></a>
+      </span>
+    
+  </div>
+
 
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-05-14T20:48:48+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-02-02T16:45:20+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：May 14, 2024</p>
+    <p>发布于：Feb 2, 2023</p>
   </a>
 </div>
 
@@ -2469,11 +2479,66 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>我印象最深刻的一句话是：有病就去治</p>
-<p>请允许我载着理发店</p>
+    <h1 id="1-Flex布局"><a href="#1-Flex布局" class="headerlink" title="1.Flex布局"></a>1.Flex布局</h1><p>Flex常用属性</p>
+<ul>
+<li>flex-direction</li>
+<li>flex-wrap</li>
+<li>flew-flow</li>
+<li>justify-content</li>
+<li>align-items</li>
+<li>align-content</li>
+</ul>
+<p>容器默认存在两根轴：水平的主轴（main axis）和垂直的交叉轴（cross axis）。主轴的开始位置（与边框的交叉点）叫做main start，结束位置叫做main end；交叉轴的开始位置叫做cross start，结束位置叫做cross end。</p>
+<p>项目默认沿主轴排列。单个项目占据的主轴空间叫做main size，占据的交叉轴空间叫做cross size。</p>
+<h2 id="1-1flex-direction"><a href="#1-1flex-direction" class="headerlink" title="1.1flex-direction"></a>1.1flex-direction</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">flex-direction</span>: row | row-reverse | column | column-reverse</span><br></pre></td></tr></table></figure>
+
+<p>包含四个属性值</p>
+<p>row: 默认值，表示沿水平方向，由左到右。</p>
+<p>row-reverse ：表示沿水平方向，由右到左</p>
+<p>column：表示垂直方向，由上到下</p>
+<p>column-reverse:表示垂直方向，由下到上</p>
+<h2 id="1-2flex-wrap"><a href="#1-2flex-wrap" class="headerlink" title="1.2flex-wrap"></a>1.2flex-wrap</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">flex-wrap</span>: nowrap | wrap | wrap-reverse</span><br></pre></td></tr></table></figure>
+
+<p>nowrap：不换行，元素宽度失效，强行显示在一行</p>
+<p>wrap：正常换行，第一个位于第一行的第一个</p>
+<p>wrap-reverse：反向换行，第一个位于最下面</p>
+<h2 id="1-3justify-content"><a href="#1-3justify-content" class="headerlink" title="1.3justify-content"></a>1.3justify-content</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">justify-content</span>: flex-start | flex-end | center | space-between | space-around</span><br></pre></td></tr></table></figure>
+
+<p>flex-start：左对齐</p>
+<p>flex-end：右对齐</p>
+<p>center：居中</p>
+<p>space-between：两端对齐，项目之间的间隔都相等</p>
+<p>space-around：每个项目两侧间隔相等</p>
+<h2 id="1-4align-items"><a href="#1-4align-items" class="headerlink" title="1.4align-items"></a>1.4align-items</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">align-items</span>: flex-start | flex-end | center | baseline | stretch</span><br></pre></td></tr></table></figure>
+
+<p>flex-start：交叉轴的起点对齐</p>
+<p>flex-end：交叉轴的终点对齐</p>
+<p>center：交叉轴的中点对齐</p>
+<p>baseline：项目的第一行文字的基线对齐</p>
+<p>stretch：如果项目为设置高度或为auto，将占满整个容器的高度</p>
+<h2 id="1-5align-content"><a href="#1-5align-content" class="headerlink" title="1.5align-content"></a>1.5align-content</h2><p>控制多行项目，设置后align-items会失效</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">align-content</span>: flex-start | flex-end | center | space-between | space-around</span><br></pre></td></tr></table></figure>
+
+<p>flex-start：与交叉轴起点对齐</p>
+<p>flex-end：与交叉轴终点对齐</p>
+<p>center：与交叉轴的中点对齐</p>
+<p>space-between：与交叉轴两端对齐，轴线之间</p>
+<p>space-around：轴线占满整个交叉轴</p>
 
   </div>
   
+  
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
+      
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+      <!-- 打赏组件 -->
+      
+    </div>
   
   
     
@@ -2483,7 +2548,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-05-14T22:58:40+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-05-14T21:58:34+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：May 14, 2024</p>
@@ -2505,7 +2570,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/about/index.html&title=about - Hexo&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/flex-note/&title=Flex弹性盒子用法 - Hexo&summary="
           
           >
           
@@ -2517,7 +2582,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/about/index.html&title=about - Hexo&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/flex-note/&title=Flex弹性盒子用法 - Hexo&summary="
           
           >
           
@@ -2529,7 +2594,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/about/index.html&title=about - Hexo&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/flex-note/&title=Flex弹性盒子用法 - Hexo&summary="
           
           >
           
@@ -2560,6 +2625,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
 
   
+    <div class="prev-next">
+      
+        <a class='prev' href='/nacos-gateway/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Nacos搭配Gateway用法</p>
+          <p class='content'>1.Nacosnacos下载
+2.1Nacos Server启动1234#进入bin文件夹bash -f ./startup.sh#关闭./shutdown.sh
+
+访问链接：http://12...</p>
+        </a>
+      
+      
+        <a class='next' href='/Vue2-note/'>
+          <p class='title'>Vue2学习笔记<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>1.安装手脚架1npm install -g @vue/cli
+
+2.模板语法1234567891011121314151617181920212223242526272829&lt;!DOCT...</p>
+        </a>
+      
+    </div>
+  
   <!-- Custom Files postEnd begin-->
   
   <!-- Custom Files postEnd end-->
@@ -2586,9 +2671,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
 
 
-  <div class="">
-    <!-- pjax占位 -->
-  </div>
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1flex-direction"><span class="toc-text">1.1flex-direction</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2flex-wrap"><span class="toc-text">1.2flex-wrap</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3justify-content"><span class="toc-text">1.3justify-content</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4align-items"><span class="toc-text">1.4align-items</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-5align-content"><span class="toc-text">1.5align-content</span></a></li></ol>
+    </div>
+  </section>
 
   
 
@@ -2642,7 +2737,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -3153,7 +3248,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"lzy","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Hexo"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"http://example.com/","keywords":null,"description":"blog","author":{"@type":"Person","name":"lzy","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"blog"},"publisher":{"@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"about","description":"blog","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/about/index.html"},"author":{"@type":"Person","name":"lzy","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/about/index.html","wordCount":0,"datePublished":"2024-05-14T12:48:48.000Z","dateModified":"2024-05-14T14:58:40.081Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"lzy","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Hexo"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/前端/","name":"前端"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/flex-note/","name":"Flex弹性盒子用法"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"http://example.com/","keywords":null,"description":"blog","author":{"@type":"Person","name":"lzy","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"blog"},"publisher":{"@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Flex弹性盒子用法","description":"blog","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/flex-note/"},"author":{"@type":"Person","name":"lzy","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/flex-note/","wordCount":0,"datePublished":"2023-02-02T08:45:20.000Z","dateModified":"2024-05-14T13:58:34.247Z","articleSection":"前端","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

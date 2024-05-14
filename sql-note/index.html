@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://example.com/about/"/>
+  <link rel="canonical" href="http://example.com/sql-note/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -33,19 +33,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>about - Hexo</title>
+  <title>数据库复习笔记 - Hexo</title>
   <meta name="keywords" content="null">
   <meta desc name="description" content="blog - lzy - Hexo">
   
-<meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="http://example.com/about/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据库复习笔记">
+<meta property="og:url" content="http://example.com/sql-note/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="我印象最深刻的一句话是：有病就去治 请允许我载着理发店">
+<meta property="og:description" content="1.关系代数1.1并、交、差        关系S1           Sno     Sname     Sdept           0001     Mary     IS           0003     Candy     IS           0004     Jam     IS              关系S2           Sno     Sname">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2024-05-14T12:48:48.000Z">
-<meta property="article:modified_time" content="2024-05-14T14:58:40.081Z">
+<meta property="article:published_time" content="2021-11-05T07:30:29.000Z">
+<meta property="article:modified_time" content="2024-05-14T14:38:41.499Z">
 <meta property="article:author" content="lzy">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -2339,7 +2339,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class='cover-wrapper page dock' style="display: none;">
+      <div id="none" class='cover-wrapper post dock' style="display: none;">
         
   <div class='cover-bg lazyload placeholder' data-bg="https://gcore.jsdelivr.net/gh/MHG-LAB/cron@gh-pages/bing/bing.jpg"></div>
 
@@ -2400,8 +2400,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper">
           
 <div id="l_main" class=''>
-  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-page" id="page" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://example.com/about/index.html">
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="http://example.com/sql-note/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Hexo">
   </span>
@@ -2422,7 +2422,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        about
+        数据库复习笔记
       </h1>
       <div class='new-meta-box'>
         
@@ -2439,14 +2439,24 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/MySQL/">MySQL</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/MySQL/" itemprop="url"><span itemprop="name">MySQL</span></a>
+      </span>
+    
+  </div>
+
 
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-05-14T20:48:48+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2021-11-05T15:30:29+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：May 14, 2024</p>
+    <p>发布于：Nov 5, 2021</p>
   </a>
 </div>
 
@@ -2469,11 +2479,757 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>我印象最深刻的一句话是：有病就去治</p>
-<p>请允许我载着理发店</p>
+    <h2 id="1-关系代数"><a href="#1-关系代数" class="headerlink" title="1.关系代数"></a>1.关系代数</h2><h3 id="1-1并、交、差"><a href="#1-1并、交、差" class="headerlink" title="1.1并、交、差"></a>1.1并、交、差</h3><table border="1">
+  <tr align="center">
+    <th colspan=3>关系S1</th>
+  </tr>
+  <tr align="center">
+    <td>Sno</td>
+    <td>Sname</td>
+    <td>Sdept</td>
+  </tr>
+  <tr align="center">
+    <td>0001</td>
+    <td>Mary</td>
+    <td>IS</td>
+  </tr>
+  <tr align="center">
+    <td>0003</td>
+    <td>Candy</td>
+    <td>IS</td>
+  </tr>
+  <tr align="center">
+    <td>0004</td>
+    <td>Jam</td>
+    <td>IS</td>
+  </tr>
+</table>
+
+<table border="1">
+  <tr align="center">
+    <th colspan=3>关系S2</th>
+  </tr>
+  <tr align="center">
+    <td>Sno</td>
+    <td>Sname</td>
+    <td>Sdept</td>
+  </tr>
+  <tr align="center">
+    <td>0001</td>
+    <td>Mary</td>
+    <td>IS</td>
+  </tr>
+  <tr align="center">
+    <td>0008</td>
+    <td>Katter</td>
+    <td>IS</td>
+  </tr>
+  <tr align="center">
+    <td>0021</td>
+    <td>Tom</td>
+    <td>IS</td>
+  </tr>
+</table>
+
+<p>交：二者重复行</p>
+<p>$$<br>S1 \cap S2<br>$$</p>
+<table border="1">
+  <tr align="center">
+    <td>Sno</td>
+    <td>Sname</td>
+    <td>Sdept</td>
+  </tr>
+  <tr align="center">
+    <td>0001</td>
+    <td>Mary</td>
+    <td>IS</td>
+  </tr>
+</table>
+
+<p>并：二者元组之和去除重复行</p>
+<p>$$<br>S1 \cup S2<br>$$</p>
+<table border="1">
+  <tr align="center">
+    <td>Sno</td>
+    <td>Sname</td>
+    <td>Sdept</td>
+  </tr>
+  <tr align="center">
+    <td>0001</td>
+    <td>Mary</td>
+    <td>IS</td>
+  </tr>
+  <tr align="center">
+    <td>0003</td>
+    <td>Candy</td>
+    <td>IS</td>
+  </tr>
+  <tr align="center">
+    <td>0004</td>
+    <td>Jam</td>
+    <td>IS</td>
+  </tr>
+  <tr align="center">
+    <td>0008</td>
+    <td>Katter</td>
+    <td>IS</td>
+  </tr>
+  <tr align="center">
+    <td>0021</td>
+    <td>Tom</td>
+    <td>IS</td>
+  </tr>
+</table>
+
+<p>差：前者去除二者重复行</p>
+<p>$$<br>S1 — S2<br>$$</p>
+<table border="1">
+  <tr align="center">
+    <td>Sno</td>
+    <td>Sname</td>
+    <td>Sdept</td>
+  </tr>
+  <tr align="center">
+    <td>0003</td>
+    <td>Candy</td>
+    <td>IS</td>
+  </tr>
+  <tr align="center">
+    <td>0004</td>
+    <td>Jam</td>
+    <td>IS</td>
+  </tr>
+</table>
+
+<h3 id="1-2笛卡尔积、投影、选择"><a href="#1-2笛卡尔积、投影、选择" class="headerlink" title="1.2笛卡尔积、投影、选择"></a>1.2笛卡尔积、投影、选择</h3><table border="1">
+  <tr align="center">
+    <th colspan=3>关系S1</th>
+  </tr>
+  <tr align="center">
+    <td>Sno</td>
+    <td>Sname</td>
+    <td>Sdept</td>
+  </tr>
+  <tr align="center">
+    <td>0001</td>
+    <td>Mary</td>
+    <td>IS</td>
+  </tr>
+  <tr align="center">
+    <td>0003</td>
+    <td>Candy</td>
+    <td>IS</td>
+  </tr>
+  <tr align="center">
+    <td>0004</td>
+    <td>Jam</td>
+    <td>IS</td>
+  </tr>
+</table>
+
+<table border="1">
+  <tr align="center">
+    <th colspan=3>关系S2</th>
+  </tr>
+  <tr align="center">
+    <td>Sno</td>
+    <td>Sname</td>
+    <td>Sdept</td>
+  </tr>
+  <tr align="center">
+    <td>0001</td>
+    <td>Mary</td>
+    <td>IS</td>
+  </tr>
+  <tr align="center">
+    <td>0008</td>
+    <td>Katter</td>
+    <td>IS</td>
+  </tr>
+  <tr align="center">
+    <td>0021</td>
+    <td>Tom</td>
+    <td>IS</td>
+  </tr>
+</table>
+
+<p>笛卡尔积：将两个集合中的元组两两并联<br>$$<br>S1 \times S2<br>$$</p>
+<table border="1">
+  <tr align="center">
+    <td>Sno</td>
+    <td>Sname</td>
+    <td>Sdept</td>
+    <td>Sno</td>
+    <td>Sname</td>
+    <td>Sdept</td>
+  </tr>
+  <tr align="center">
+    <td>0001</td>
+    <td>Mary</td>
+    <td>IS</td>
+    <td>0001</td>
+    <td>Mary</td>
+    <td>IS</td>
+  </tr>
+  <tr align="center">
+    <td>0001</td>
+    <td>Mary</td>
+    <td>IS</td>
+    <td>0008</td>
+    <td>Katter</td>
+    <td>IS</td>
+  </tr>
+  <tr align="center">
+    <td>0001</td>
+    <td>Mary</td>
+    <td>IS</td>
+    <td>0021</td>
+    <td>Tom</td>
+    <td>IS</td>
+  </tr>
+  <tr align="center">
+    <td>0003</td>
+    <td>Candy</td>
+    <td>IS</td>
+    <td>0001</td>
+    <td>Mary</td>
+    <td>IS</td>
+  </tr>
+  <tr align="center">
+    <td>0003</td>
+    <td>Candy</td>
+    <td>IS</td>
+    <td>0008</td>
+    <td>Katter</td>
+    <td>IS</td>
+  </tr>
+  <tr align="center">
+    <td>0003</td>
+    <td>Candy</td>
+    <td>IS</td>
+    <td>0021</td>
+    <td>Tom</td>
+    <td>IS</td>
+  </tr>
+  <tr align="center">
+    <td>0004</td>
+    <td>Jam</td>
+    <td>IS</td>
+    <td>0001</td>
+    <td>Mary</td>
+    <td>IS</td>
+  </tr>
+  <tr align="center">
+    <td>0004</td>
+    <td>Jam</td>
+    <td>IS</td>
+    <td>0008</td>
+    <td>Katter</td>
+    <td>IS</td>
+  </tr>
+  <tr align="center">
+    <td>0004</td>
+    <td>Jam</td>
+    <td>IS</td>
+    <td>0021</td>
+    <td>Tom</td>
+    <td>IS</td>
+  </tr>
+</table>
+
+<p>投影：对属性列的选择列出<br>$$<br>\Pi_{Sno,Sname}(S1)<br>$$</p>
+<table border="1">
+  <tr align="center">
+    <td>Sno</td>
+    <td>Sname</td>
+  </tr>
+  <tr align="center">
+    <td>0001</td>
+    <td>Mary</td>
+  </tr>
+  <tr align="center">
+    <td>0003</td>
+    <td>Candy</td>
+  </tr>
+  <tr align="center">
+    <td>0004</td>
+    <td>Jam</td>
+  </tr>
+</table>
+
+<p>选择：根据某些条件对关系做水平切割<br>$$<br>\sigma_{Sno&#x3D;0001}S1<br>$$</p>
+<table border="1">
+  <tr align="center">
+    <td>Sno</td>
+    <td>Sname</td>
+    <td>Sdept</td>
+  </tr>
+  <tr align="center">
+    <td>0001</td>
+    <td>Mary</td>
+    <td>IS</td>
+  </tr>
+</table>
+### 1.3连接
+
+<p><strong>θ-连接</strong>：笛卡尔积中满足条件θ的元组构成的集合</p>
+<p><strong>等值连接</strong>：特殊的θ-连接，θ为等值条件</p>
+<p><strong>自然连接</strong>：特殊的等值连接，要求两个关系中进行比较的分量必须相同属性组，并将重复属性（字段）去掉，如S1⋈S2</p>
+<p><strong>左外连接</strong>：自然连接（或θ连接）+左侧表中缺失的元组</p>
+<p><strong>右外连接</strong>：自然连接（或θ连接）+右侧表中缺失的元组</p>
+<p><strong>全外连接</strong>：自然连接（或θ连接）+两侧表中缺失的元组</p>
+<h3 id="1-4除法"><a href="#1-4除法" class="headerlink" title="1.4除法"></a>1.4除法</h3><p>两个关系中的某个或某些属性出自相同的域集，记为A</p>
+<p>除去这些属性A后对剩下的属性进行筛选</p>
+<p>选出其取值所在的象集中包含有除数关系中对A的投影的部分</p>
+<table border="1">
+  <tr align="center">
+    <th colspan=3>关系R</th>
+  </tr>
+  <tr align="center">
+    <td>A</td>
+    <td>B</td>
+    <td>C</td>
+  </tr>
+  <tr align="center">
+    <td>a1</td>
+    <td>b1</td>
+    <td>c2</td>
+  </tr>
+  <tr align="center">
+    <td>a1</td>
+    <td>b2</td>
+    <td>c3</td>
+  </tr>
+  <tr align="center">
+    <td>a1</td>
+    <td>b2</td>
+    <td>c1</td>
+  </tr>
+  <tr align="center">
+    <td>a2</td>
+    <td>b3</td>
+    <td>c7</td>
+  </tr>
+  <tr align="center">
+    <td>a2</td>
+    <td>b2</td>
+    <td>c3</td>
+  </tr>
+  <tr align="center">
+    <td>a3</td>
+    <td>b4</td>
+    <td>c6</td>
+  </tr>
+  <tr align="center">
+    <td>a4</td>
+    <td>b6</td>
+    <td>c6</td>
+  </tr>
+</table>
+
+<table border="1">
+  <tr align="center">
+    <th colspan=3>关系S</th>
+  </tr>
+  <tr align="center">
+    <td>B</td>
+    <td>C</td>
+    <td>D</td>
+  </tr>
+  <tr align="center">
+    <td>b1</td>
+    <td>c2</td>
+    <td>d1</td>
+  </tr>
+  <tr align="center">
+    <td>b2</td>
+    <td>c1</td>
+    <td>d1</td>
+  </tr>
+  <tr align="center">
+    <td>b2</td>
+    <td>c3</td>
+    <td>d2</td>
+  </tr>
+</table>
+
+<p>$$<br>R \div S<br>$$</p>
+<table border="1">
+  <tr align="center">
+    <td>A</td>
+  </tr>
+  <tr align="center">
+    <td>a1</td>
+  </tr>
+</table>
+在关系R中，A可以取四个值{a1，a2，a3，a4}
+a1的象集为 {(b1，c2)，(b2，c3)，(b2，c1)}
+a2的象集为 {(b3，c7)，(b2，c3)}
+a3的象集为 {(b4，c6)}
+a4的象集为 {(b6，c6)}
+S在(B，C)上的投影为:
+{(b1，c2)，(b2，c1)，(b2，c3) }
+只有a1的象集包含了S在(B，C)属性组上的投影, 所以:
+R ÷ S = { a1 }
+
+<h2 id="2-元组关系演算"><a href="#2-元组关系演算" class="headerlink" title="2.元组关系演算"></a>2.元组关系演算</h2><p>元组关系演算（Tuple Relational Calculus）是一种用于查询关系型数据库的声明性查询语言。与关系代数一样，它用于从数据库中检索数据，但它的方法更侧重于描述所需的数据，而不是指定如何检索数据。</p>
+<p><strong>基本形式</strong>：{t|P(t)}</p>
+<p>其中 t 是元组变量， P(t) 为元组关系演算公式，简称公式。 它由原子公式和运算符组成。P(t)运算符优先次序：();θ; ∃; ∀; ￢;∧;v</p>
+<p><strong>三种形式的原子公式</strong>：</p>
+<p>1.<strong>t ∈ R</strong> ：t 是关系 R 中的一个元组</p>
+<p>2.<strong>s[A] θ c</strong> ：元组分量s[A]与常量 c 之间满足比较关系。θ：比较运算符,&lt;, &lt;&#x3D;,&#x3D;, &lt;&gt;,&gt;, &gt;&#x3D;</p>
+<p>3.<strong>s[A] θ u[B]</strong> ：s[A] 与 u[B] 为元组分量，A和B分别是某些关系的属性，他们之间满足比较关系θ</p>
+<p>如：</p>
+<p><strong>{S|(∃s)(Staff(S)^S[position]&#x3D;’Manager’^S[salary]&gt;25000)}</strong></p>
+<p>表示列出收入高于25000的所有经理</p>
+<p>其中Staff(S)表示S属于表Staff，S[position]表示S的position属性</p>
+<p><strong>{ab|R(ab)^R(ba)}</strong></p>
+<p>表示(a,b)∈R且(b,a)∈R的元组集合，R为二元关系，</p>
+<p>其等价的关系代数表达式为：π1,2 (σ1&#x3D;4∧2-3 (R×R))</p>
+<h2 id="3-事务"><a href="#3-事务" class="headerlink" title="3.事务"></a>3.事务</h2><p>要么不做，要么全做</p>
+<p><strong>脏读</strong>：一个事务读了其他事务尚未提交的数据，若该事务回滚了，读取的数据是无效的</p>
+<p><strong>不可重复读</strong>：一个事务多次读取某一行数据，但结果不一致，因为两次读取之间数据被另一个数据修改了</p>
+<p><strong>幻读</strong>：事务多次执行一个查询，得到的结果不一致，因为两次查询之间有其他事务新增或删除了行</p>
+<table border="1">
+  <tr align="center">
+    <th>隔离等级</th>
+    <th>脏读</th>
+    <th>不可重复读</th>
+    <th>幻读</th>
+  </tr>
+  <tr align="center">
+    <td>READ UNCOMMITED</td>
+    <td>Y</td>
+    <td>Y</td>
+    <td>Y</td>
+  </tr>
+  <tr align="center">
+    <td>READ COMMITED</td>
+    <td>N</td>
+    <td>Y</td>
+    <td>Y</td>
+  </tr>
+  <tr align="center">
+    <td>REPEATABLE READ</td>
+    <td>N</td>
+    <td>N</td>
+    <td>Y</td>
+  </tr>
+  <tr align="center">
+    <td>SERIALIZABLE</td>
+    <td>N</td>
+    <td>N</td>
+    <td>N</td>
+  </tr>
+</table>
+**READ UNCOMMITED**：读未提交，最低的隔离等级，一个事务可以读取其他事务尚未提交的数据，行级锁
+
+<p><strong>READ COMMITED</strong>：读提交，只能读取已提交的数据，避免了脏读，行级锁</p>
+<p><strong>REPEATABLE READ</strong>：可重复读，一个事务可以读取其开始之前的数据，且不允许其他事务修改这些数据，行级锁</p>
+<p><strong>SERIALIZABLE</strong>：串行化，事务彼此之间完全隔离，事务的执行像是串行的，避免了脏读、不可重复读、幻读，表级锁</p>
+<h2 id="4-规范化"><a href="#4-规范化" class="headerlink" title="4.规范化"></a>4.规范化</h2><h3 id="4-1函数依赖"><a href="#4-1函数依赖" class="headerlink" title="4.1函数依赖"></a>4.1函数依赖</h3><p><strong>完全函数依赖</strong>：设X、Y是关系R的两个属性集合，X‘是X的真子集，存在X-&gt;Y，但对每一个X‘-&gt;Y，则称Y完全依赖于X。</p>
+<p>即通过AB能得出C，但是AB单独得不出C，称C完全依赖于AB，如（学号，课程）推出分数，但单独用学号、课程推不出分数，则称分数完全依赖于（学号，课程）</p>
+<p><strong>部分函数依赖</strong>：假如Y函数依赖于X，但同时Y不完全函数依赖于X，则称Y部分函数依赖于X。</p>
+<p>即通过AB能得出C，通过A也能得出C，或者通过B也能得出C，那么说C部分依赖于AB，如（学号，课程）能推出姓名，但学号可以直接推出姓名，所以姓名部分依赖于（学号，课程）</p>
+<p><strong>传递函数依赖</strong>：设X，Y，Z是关系R中互不相同的属性集合，存在X-&gt;Y(Y!-&gt;X)，Y-&gt;Z，则称Z传递函数依赖于X。</p>
+<p>即通过A得到B，通过B得到C，但通过C得不到A，那么说C传递依赖于A，如学号推出系名，系名推出系主任，但是系主任推不出学号，那么称系主任传递依赖于学号</p>
+<p><strong>超键</strong>:能够唯一标识元组的属性集叫做超键。<br><strong>候选键</strong>:如果超键不包括多余的属性,那么这个超键就是候选键。<br><strong>主键</strong>:用户可以从候选键中选择一个作为主键。<br><strong>外键</strong>:如果数据表R1中的某属性集不是R1的主键M而是另一个数据表R2的主键,那么这个属性集就是数据表R1的外键。</p>
+<h3 id="4-2第一范式（1NF）"><a href="#4-2第一范式（1NF）" class="headerlink" title="4.2第一范式（1NF）"></a>4.2第一范式（1NF）</h3><p>数据库表每一行于每一列相交的部分有且只有一个值，即表中每个字段的值不可再分</p>
+<h3 id="4-3第二范式（2NF）"><a href="#4-3第二范式（2NF）" class="headerlink" title="4.3第二范式（2NF）"></a>4.3第二范式（2NF）</h3><p>非主键属性必须完全依赖于主键属性，不能只依赖主键属性的一部分</p>
+<h3 id="4-4第三范式（3NF）"><a href="#4-4第三范式（3NF）" class="headerlink" title="4.4第三范式（3NF）"></a>4.4第三范式（3NF）</h3><p>所有非主键属性不能依赖于其他非主键属性，即不能存在传递依赖关系</p>
+<h2 id="5-SQL"><a href="#5-SQL" class="headerlink" title="5. SQL"></a>5. SQL</h2><h3 id="5-1-CREATE"><a href="#5-1-CREATE" class="headerlink" title="5.1 CREATE"></a>5.1 CREATE</h3><p> 用于创建新表、视图、索引等数据库对象</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">#建库</span><br><span class="line">CREATE DATABASE test;</span><br><span class="line">#建表</span><br><span class="line">DROP TABLE IF EXISTS `dept`;</span><br><span class="line">CREATE TABLE `dept`</span><br><span class="line">(</span><br><span class="line">    dept_id INT NOT NULL COMMENT &#x27;部门号&#x27;,</span><br><span class="line">    dept_name VARCHAR(16) NOT NULL COMMENT &#x27;部门名称&#x27;,</span><br><span class="line">    PRIMARY KEY (dept_id)</span><br><span class="line">)COMMENT &#x27;部门&#x27;;</span><br><span class="line">DROP TABLE IF EXISTS `emp`;</span><br><span class="line">CREATE TABLE `emp`</span><br><span class="line">(</span><br><span class="line">    eid INT NOT NULL COMMENT &#x27;员工号&#x27;,</span><br><span class="line">    name VARCHAR(16) NOT NULL COMMENT &#x27;姓名&#x27;,</span><br><span class="line">    age INT NOT NULL COMMENT &#x27;年龄&#x27;,</span><br><span class="line">    time DATE COMMENT &#x27;入职时间&#x27;,</span><br><span class="line">    incoming INT COMMENT &#x27;收入&#x27;,</span><br><span class="line">    dept_id INT NOT NULL COMMENT &#x27;部门号&#x27;,</span><br><span class="line">    FOREIGN KEY (dept_id) REFERENCES dept(dept_id),</span><br><span class="line">    PRIMARY KEY (eid)</span><br><span class="line">)COMMENT &#x27;员工表&#x27;;</span><br></pre></td></tr></table></figure>
+
+<p><strong>SQL数据类型（MySQL）</strong>:</p>
+<table border="1">
+  <tr align="center">
+    <th colspan=2>整数类型</th>
+  </tr>
+  <tr align="center">
+    <td>TINYINT</td>
+    <td>1字节整数，范围-128到127（有符号），0到255（无符号）</td>
+  </tr>
+  <tr align="center">
+    <td>SMALLINT</td>
+    <td>2字节整数，范围-32,768到32,767（有符号），0到65,535（无符号）</td>
+  </tr>
+  <tr align="center">
+    <td>MEDIUMINT</td>
+    <td>3字节整数，范围-8,388,608到8,388,607（有符号），0到16,777,215（无符号）</td>
+  </tr>
+  <tr align="center">
+    <td>INT（或INTEGER）</td>
+    <td> 4字节整数，通常范围-2,147,483,648到2,147,483,647（有符号），0到4,294,967,295（无符号）</td>
+  </tr>
+  <tr align="center">
+    <td>BIGINT</td>
+    <td>8字节整数，范围-9,223,372,036,854,775,808到9,223,372,036,854,775,807（有符号），0到18,446,744,073,709,551,615（无符号）</td>
+  </tr>
+  <tr align="center">
+    <th colspan=2>小数和浮点数类型</th>
+  </tr>
+  <tr align="center">
+    <td>DECIMAL</td>
+    <td>用于精确的十进制数值，例如货币计算。</td>
+  </tr>
+  <tr align="center">
+    <td>FLOAT</td>
+    <td>单精度浮点数</td>
+  </tr>
+  <tr align="center">
+    <td>DOUBLE</td>
+    <td>双精度浮点数，用于存储大范围的浮点数</td>
+  </tr>
+  <tr align="center">
+    <th colspan=2>字符串类型</th>
+  </tr>
+  <tr align="center">
+    <td>CHAR</td>
+    <td>固定长度字符串，最多255个字符</td>
+  </tr>
+  <tr align="center">
+    <td>VARCHAR</td>
+    <td>可变长度字符串，最多65535个字符</td>
+  </tr>
+  <tr align="center">
+    <td>TINYTEXT</td>
+    <td>微型文本，最多255个字符</td>
+  </tr>
+  <tr align="center">
+    <td>TEXT</td>
+    <td>用于一般文本，最多65535个字符</td>
+  </tr>
+  <tr align="center">
+    <td>MEDIUMTEXT</td>
+    <td>用于中等长度文本，最多16,777,215个字符</td>
+  </tr>
+  <tr align="center">
+    <td>LONGTEXT</td>
+    <td> 用于大型文本，最多4,294,967,295个字符</td>
+  </tr>
+  <tr align="center">
+    <th colspan=2>日期和时间类型</th>
+  </tr>
+  <tr align="center">
+    <td>DATE</td>
+    <td>用于存储日期，格式'YYYY-MM-DD'</td>
+  </tr>
+  <tr align="center">
+    <td>TIME</td>
+    <td>用于存储时间，格式'HH:MM:SS'</td>
+  </tr>
+  <tr align="center">
+    <td>DATETIME</td>
+    <td>用于存储日期和时间，格式'YYYY-MM-DD HH:MM:SS'</td>
+  </tr>
+  <tr align="center">
+    <td>TIMESTAMP</td>
+    <td>用于存储时间戳，通常表示数据的修改时间</td>
+  </tr>
+  <tr align="center">
+    <td>YEAR</td>
+    <td>用于存储年份（2位或4位表示）</td>
+  </tr>
+  <tr align="center">
+    <th colspan=2>二进制数据类型</th>
+  </tr>
+  <tr align="center">
+    <td>BINARY</td>
+    <td>固定长度的二进制数据类型,最多可以存储255个字节</td>
+  </tr>
+  <tr align="center">
+    <td>VARBINARY</td>
+    <td>可变长度的二进制数据类型，最多可以存储65535个字节</td>
+  </tr>
+  <tr align="center">
+    <td>TINYBLOB</td>
+    <td>用于存储短的二进制数据，最多可以存储255个字节</td>
+  </tr>
+  <tr align="center">
+    <td>BLOB</td>
+    <td>用于存储一般二进制数据，最多可以存储65535个字节</td>
+  </tr>
+  <tr align="center">
+    <td>MEDIUMBLOB</td>
+    <td>用于中等大小的二进制数据，最多可以存储16,777,215个字节</td>
+  </tr>
+  <tr align="center">
+    <td>LONGBLOB</td>
+    <td>用于大型二进制数据，最多可以存储4,294,967,295个字节</td>
+  </tr>
+  <tr align="center">
+    <th colspan=2>布尔类型</th>
+  </tr>
+  <tr align="center">
+    <td>BOOLEAN</td>
+    <td>用于存储布尔值，通常是true或false</td>
+  </tr>
+</table>
+
+
+<h3 id="5-2-SELECT"><a href="#5-2-SELECT" class="headerlink" title="5.2 SELECT"></a>5.2 SELECT</h3><p>用于从数据库中检索数据。SELECT语句用于查询表，选择特定的列，并可以根据条件筛选行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT eid, name, age</span><br><span class="line">FROM emp;</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-3-INSERT"><a href="#5-3-INSERT" class="headerlink" title="5.3 INSERT"></a>5.3 INSERT</h3><p>用于向数据库表中插入新行的数据。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO emp(eid, name, age, time, incoming, dept_id) VALUES (1,&#x27;name1&#x27;,18,&#x27;2023-9-14&#x27;,4000,1);</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-4-UPDATE"><a href="#5-4-UPDATE" class="headerlink" title="5.4 UPDATE"></a>5.4 UPDATE</h3><p>用于更新数据库表中的现有数据</p>
+<p>在更新多个列时，只需要使用一条 SET 命令，每个“列&#x3D;值”对之间用逗号分隔（最后一列之后不用逗号）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">UPDATE emp </span><br><span class="line">SET emp.incoming = 6000 </span><br><span class="line">WHERE emp.eid = 4;</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-5-DELETE"><a href="#5-5-DELETE" class="headerlink" title="5.5 DELETE"></a>5.5 DELETE</h3><p>从一个表中删除（去掉）数据</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DELETE FROM emp WHERE emp.eid = 8;</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-6-ALTER"><a href="#5-6-ALTER" class="headerlink" title="5.6 ALTER"></a>5.6 ALTER</h3><p>操纵表结构</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#添加列</span><br><span class="line">ALTER TABLE emp</span><br><span class="line">ADD COLUMN test VARCHAR(16);</span><br><span class="line">#删除列</span><br><span class="line">ALTER TABLE emp</span><br><span class="line">DROP COLUMN test;</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-7-WHERE"><a href="#5-7-WHERE" class="headerlink" title="5.7 WHERE"></a>5.7 WHERE</h3><p>用于指定过滤条件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">#条件查询</span><br><span class="line">SELECT eid, name, age</span><br><span class="line">FROM emp</span><br><span class="line">WHERE emp.incoming &gt;= 2000 AND emp.dept_id = 3;</span><br><span class="line">#范围查询</span><br><span class="line">SELECT eid, name, age, incoming</span><br><span class="line">FROM emp</span><br><span class="line">WHERE emp.incoming BETWEEN 2000 AND 5000;</span><br><span class="line">#判空查询</span><br><span class="line">SELECT eid, name, age, incoming</span><br><span class="line">FROM emp</span><br><span class="line">WHERE dept_id IS NULL;</span><br><span class="line">#通配符,能不用就不用，%匹配0到多个字符</span><br><span class="line">SELECT eid, name, age, incoming</span><br><span class="line">FROM emp</span><br><span class="line">WHERE name LIKE &#x27;name%&#x27;;</span><br><span class="line">#_匹配单个字符</span><br><span class="line">SELECT eid, name, age, incoming</span><br><span class="line">FROM emp</span><br><span class="line">WHERE name LIKE &#x27;name_&#x27;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-8-GROUP-BY"><a href="#5-8-GROUP-BY" class="headerlink" title="5.8 GROUP BY"></a>5.8 GROUP BY</h3><p>进行数据分组，常与聚集函数一同使用</p>
+<p>GROUP BY 子句必须出现在WHERE子句之后，ORDER BY子句之前</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#统计各部门人数</span><br><span class="line">SELECT COUNT(*) AS num_person,dept_id</span><br><span class="line">FROM emp</span><br><span class="line">GROUP BY dept_id;</span><br></pre></td></tr></table></figure>
+
+<table border="1">
+  <tr align="center">
+    <th colspan=2>常用聚集函数</th>
+  </tr>
+  <tr align="center">
+    <td>AVG()</td>
+    <td>返回某列平均值</td>
+  </tr>
+  <tr align="center">
+    <td>COUNT()</td>
+    <td>返回某列行数</td>
+  </tr>
+  <tr align="center">
+    <td>MAX()</td>
+    <td>返回某列最大值</td>
+  </tr>
+  <tr align="center">
+    <td>MIN()</td>
+    <td>返回某列最小值</td>
+  </tr>
+  <tr align="center">
+    <td>SUM()</td>
+    <td>返回某列值之和</td>
+  </tr>
+</table>
+
+<h3 id="5-9-HAVING"><a href="#5-9-HAVING" class="headerlink" title="5.9 HAVING"></a>5.9 HAVING</h3><p>与WHERE类似，WHERE过滤行，HAVING过滤分组</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">SELECT COUNT(*) AS num_person,emp.dept_id,dept.dept_name</span><br><span class="line">FROM emp,dept</span><br><span class="line">WHERE emp.dept_id = dept.dept_id</span><br><span class="line">GROUP BY dept_id</span><br><span class="line">HAVING COUNT(*) &gt;=2 AND dept_id IS NOT NULL;</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-10-ORDER-BY"><a href="#5-10-ORDER-BY" class="headerlink" title="5.10 ORDER BY"></a>5.10 ORDER BY</h3><p>用于排序</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#正序排序</span><br><span class="line">SELECT name,age,incoming</span><br><span class="line">FROM emp</span><br><span class="line">ORDER BY incoming;</span><br><span class="line">#逆序排序</span><br><span class="line">SELECT name,age,incoming</span><br><span class="line">FROM emp</span><br><span class="line">ORDER BY incoming DESC;</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-11-AS"><a href="#5-11-AS" class="headerlink" title="5.11 AS"></a>5.11 AS</h3><p>用于取别名</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT AVG(incoming) AS avg_incoming</span><br><span class="line">FROM emp</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-12-JOIN"><a href="#5-12-JOIN" class="headerlink" title="5.12 JOIN"></a>5.12 JOIN</h3><p>连接</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">#笛卡尔积</span><br><span class="line">SELECT name,age,incoming,dept_name</span><br><span class="line">FROM emp JOIN dept;</span><br><span class="line">#自然连接</span><br><span class="line">SELECT name,age,incoming,dept_name</span><br><span class="line">FROM emp NATURAL JOIN dept;</span><br><span class="line">#内连接</span><br><span class="line">SELECT name,age,incoming,dept_name</span><br><span class="line">FROM emp INNER JOIN dept on emp.dept_id = dept.dept_id;</span><br><span class="line">#左连接</span><br><span class="line">SELECT name,age,incoming,dept_name</span><br><span class="line">FROM emp LEFT JOIN dept on emp.dept_id = dept.dept_id;</span><br><span class="line">#右连接</span><br><span class="line">SELECT name,age,incoming,dept_name</span><br><span class="line">FROM emp RIGHT JOIN dept on emp.dept_id = dept.dept_id;</span><br><span class="line">#全连接</span><br><span class="line">SELECT name,age,incoming,dept_name FROM emp LEFT JOIN dept on emp.dept_id = dept.dept_id</span><br><span class="line">UNION</span><br><span class="line">SELECT name,age,incoming,dept_name FROM emp RIGHT JOIN dept on emp.dept_id = dept.dept_id;</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-13-DISTINCT"><a href="#5-13-DISTINCT" class="headerlink" title="5.13 DISTINCT"></a>5.13 DISTINCT</h3><p>去除重复的值</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT DISTINCT age</span><br><span class="line">FROM emp;</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-14视图"><a href="#5-14视图" class="headerlink" title="5.14视图"></a>5.14视图</h3><p>虚拟表，和普通表一样使用，数据来自定义视图的使用的原始表，并且是动态生成的</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#创建视图</span><br><span class="line">CREATE VIEW info AS</span><br><span class="line">SELECT name,age,incoming,dept_name</span><br><span class="line">FROM emp LEFT JOIN dept on emp.dept_id = dept.dept_id;</span><br><span class="line">#删除视图</span><br><span class="line">DROP VIEW info;</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-15事务"><a href="#5-15事务" class="headerlink" title="5.15事务"></a>5.15事务</h3><p>事务隔离级别的设置是在事务开始后执行的，而不是在开启事务时指定的。这是MySQL的标准做法。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#开启事务</span><br><span class="line">BEGIN;</span><br><span class="line">#或</span><br><span class="line">START TRANSACTION;</span><br><span class="line">#设置事务隔离等级，取值有READ UNCOMMITTED,READ COMMITTED,REPEATABLE READ,SERIALIZABLE</span><br><span class="line">SET TRANSACTION ISOLATION LEVEL REPEATABLE READ;</span><br><span class="line">#提交</span><br><span class="line">COMMIT;</span><br><span class="line">#回滚</span><br><span class="line">ROLLBACK；</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-16索引"><a href="#5-16索引" class="headerlink" title="5.16索引"></a>5.16索引</h3><p><strong>索引</strong>：帮助高效获取数据的数据结构</p>
+<p>MySQL中常见索引有BTree索引（Myisam普通索引），B+Tree索引（Innodb普通索引），Hash索引（memory存储引擎）</p>
+<p><strong>优势</strong>：</p>
+<ul>
+<li>提高检索效率</li>
+<li>降低排序成本</li>
+</ul>
+<p><strong>劣势</strong>：</p>
+<ul>
+<li>占用空间</li>
+<li>降低插入删除的效率</li>
+</ul>
+<h4 id="5-16-1使用场景"><a href="#5-16-1使用场景" class="headerlink" title="5.16.1使用场景"></a>5.16.1使用场景</h4><p><strong>推荐使用索引</strong>：</p>
+<ul>
+<li>主键自动建立唯一索引</li>
+<li>频繁作为查询条件的字段应该建立索引</li>
+<li>查询中与其他表关联的字段，外键关系建立索引</li>
+<li>多字段查询下倾向创建组合索引</li>
+<li>查询中排序的字段，建立索引可提高排序速度</li>
+<li>查询中统计或分组的字段</li>
+</ul>
+<p><strong>不推荐使用索引</strong>：</p>
+<ul>
+<li>表记录太少</li>
+<li>经常增删改的表</li>
+<li>WHERE条件里用不到的字段不建立索引</li>
+</ul>
+<h4 id="5-16-2索引分类"><a href="#5-16-2索引分类" class="headerlink" title="5.16.2索引分类"></a>5.16.2索引分类</h4><p><strong>主键索引</strong>：</p>
+<p>表中的字段设定为主键后会自动建立主键索引</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#手动创建</span><br><span class="line">ALTER TABLE [表名] ADD PRIMARY KEY [字段名]</span><br><span class="line">#删除</span><br><span class="line">ALTER TABLE [表名] DROP PRIMARY KEY;</span><br></pre></td></tr></table></figure>
+
+<p><strong>唯一索引</strong>：</p>
+<p>表中的字段创建了唯一约束时会自动建立唯一索引</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#手动创建</span><br><span class="line">ALTER TABLE [表名] ADD UNIQUE INDEX [索引名]([字段名]);</span><br><span class="line">CREATE UNIQUE INDEX [索引名] ON [表名]([字段名]);</span><br><span class="line">#删除</span><br><span class="line">DROP INDEX [索引名] ON Scores;</span><br></pre></td></tr></table></figure>
+
+<p><strong>单值索引</strong>：</p>
+<p>即一个索引只包含单个列，一个表可以有多个单值索引</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#手动创建</span><br><span class="line">ALTER TABLE [表名] ADD INDEX [索引名]([字段名]);</span><br><span class="line">CREATE INDEX [索引名] ON [表名]([字段名]);</span><br><span class="line">#删除</span><br><span class="line">DROP INDEX [索引名] ON Scores;</span><br></pre></td></tr></table></figure>
+
+<p><strong>复合索引</strong>：</p>
+<p>即一个索引包含多个字段</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#手动创建</span><br><span class="line">ALTER TABLE [表名] ADD INDEX [索引名]([字段1],[字段2]);</span><br><span class="line">CREATE INDEX [索引名] ON [表名]([字段1],[字段2]);</span><br><span class="line">#删除</span><br><span class="line">DROP INDEX [索引名] ON Scores;</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-16-3索引失效"><a href="#5-16-3索引失效" class="headerlink" title="5.16.3索引失效"></a>5.16.3索引失效</h4><ul>
+<li>索引了多列，查询要从索引的最左前列开始且不跳过索引中的列，会导致索引失效</li>
+<li>不在索引列上做任何计算、函数操作，会导致索引失效</li>
+<li>范围条件右边的列索引失效，如where age &gt;23 and score &#x3D; 100,score索引失效</li>
+<li>MySQL在使用不等于时无法使用索引</li>
+<li>IS NULL可以使用索引，IS NOT NULL无法使用索引</li>
+<li>LIKE 以通配符开头会使索引失效</li>
+<li>OR 前后只要存在非索引的列</li>
+</ul>
+<h3 id="5-17-EXPLAIN"><a href="#5-17-EXPLAIN" class="headerlink" title="5.17 EXPLAIN"></a>5.17 EXPLAIN</h3><p><strong>id</strong>：用于区分不同查询操作，值越大的查询优先级越高，相同时执行顺序由上至下</p>
+<p><strong>table</strong>： 表示这一行的数据是如何获取的。可能是一个表名，也可能是一个临时表或子查询。</p>
+<p><strong>select_type</strong>：</p>
+<ul>
+<li><strong>SIMPLE</strong>：简单查询，不包含子查询或联接</li>
+<li><strong>PRIMARY</strong>：查询中若包含任何复杂的子部分，最外层查询被标记为<strong>PRIMARY</strong></li>
+<li><strong>DERIVED</strong>：在<strong>FROM</strong>列表中包含的子查询被标记为<strong>DERIVED</strong>(衍生)，<strong>MySQL</strong>会递归查询这些子查询，把结果放在临时表里</li>
+<li><strong>SUBQUERY</strong>：在<strong>SELECT</strong>或<strong>WHERE</strong>列表中包含了子查询</li>
+</ul>
+<p><strong>type</strong>：</p>
+<ul>
+<li><strong>system</strong>：只有一行数据（系统表）</li>
+<li><strong>const</strong>：通过索引一次就找到</li>
+<li><strong>eq_ref</strong>：使用唯一索引查找</li>
+<li><strong>ref</strong>：非唯一索引查找</li>
+<li><strong>range</strong>：范围查找，例如使用<strong>BETWEEN</strong>或<strong>IN</strong></li>
+<li><strong>index</strong>：使用索引进行全表扫描</li>
+<li><strong>all</strong>：全表扫描</li>
+</ul>
+<p><strong>possible_keys</strong>： 显示可能用于查询的索引列表</p>
+<p><strong>key</strong>：表示实际使用的索引。如果没有使用索引，该值为NULL</p>
+<p><strong>key_len</strong>： 表示索引中使用的字节数</p>
+<p><strong>ref</strong>：显示索引哪一列被使用了,常数表示这一列等于某个常数</p>
+<p><strong>rows</strong>： 表示<strong>MySQL</strong>估计需要检查的行数。这是一个估算值，不一定等于实际的行数</p>
+<p><strong>filtered：</strong> 表示行的过滤程度，通常是一个百分比值。它表示在表中找到的行数占估计的行数的百分比</p>
+<p><strong>Extra：</strong> 包含其他的执行信息，如使用了临时表、使用了文件排序等</p>
 
   </div>
   
+  
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
+      
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+      <!-- 打赏组件 -->
+      
+    </div>
   
   
     
@@ -2483,7 +3239,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-05-14T22:58:40+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-05-14T22:38:41+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：May 14, 2024</p>
@@ -2505,7 +3261,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/about/index.html&title=about - Hexo&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/sql-note/&title=数据库复习笔记 - Hexo&summary="
           
           >
           
@@ -2517,7 +3273,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/about/index.html&title=about - Hexo&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/sql-note/&title=数据库复习笔记 - Hexo&summary="
           
           >
           
@@ -2529,7 +3285,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/about/index.html&title=about - Hexo&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/sql-note/&title=数据库复习笔记 - Hexo&summary="
           
           >
           
@@ -2560,6 +3316,24 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
 
   
+    <div class="prev-next">
+      
+        <a class='prev' href='/VueQuillEditor-note/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>VueQuillEditor用法笔记</p>
+          <p class='content'>1.安装1234npm install vue-quill-editor --save//语法高亮npm install highlight.js
+
+2.main.js12345import V...</p>
+        </a>
+      
+      
+        <a class='next' href='/python-note/'>
+          <p class='title'>Python学习笔记<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>1.安装1.1windows下载python(压缩包)：https://www.python.org/downloads/windows/  
+下载pip:https://bootstrap.p...</p>
+        </a>
+      
+    </div>
+  
   <!-- Custom Files postEnd begin-->
   
   <!-- Custom Files postEnd end-->
@@ -2586,9 +3360,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
 
 
-  <div class="">
-    <!-- pjax占位 -->
-  </div>
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%85%B3%E7%B3%BB%E4%BB%A3%E6%95%B0"><span class="toc-text">1.关系代数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1%E5%B9%B6%E3%80%81%E4%BA%A4%E3%80%81%E5%B7%AE"><span class="toc-text">1.1并、交、差</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2%E7%AC%9B%E5%8D%A1%E5%B0%94%E7%A7%AF%E3%80%81%E6%8A%95%E5%BD%B1%E3%80%81%E9%80%89%E6%8B%A9"><span class="toc-text">1.2笛卡尔积、投影、选择</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4%E9%99%A4%E6%B3%95"><span class="toc-text">1.4除法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%85%83%E7%BB%84%E5%85%B3%E7%B3%BB%E6%BC%94%E7%AE%97"><span class="toc-text">2.元组关系演算</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E4%BA%8B%E5%8A%A1"><span class="toc-text">3.事务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E8%A7%84%E8%8C%83%E5%8C%96"><span class="toc-text">4.规范化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1%E5%87%BD%E6%95%B0%E4%BE%9D%E8%B5%96"><span class="toc-text">4.1函数依赖</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2%E7%AC%AC%E4%B8%80%E8%8C%83%E5%BC%8F%EF%BC%881NF%EF%BC%89"><span class="toc-text">4.2第一范式（1NF）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3%E7%AC%AC%E4%BA%8C%E8%8C%83%E5%BC%8F%EF%BC%882NF%EF%BC%89"><span class="toc-text">4.3第二范式（2NF）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4%E7%AC%AC%E4%B8%89%E8%8C%83%E5%BC%8F%EF%BC%883NF%EF%BC%89"><span class="toc-text">4.4第三范式（3NF）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-SQL"><span class="toc-text">5. SQL</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-CREATE"><span class="toc-text">5.1 CREATE</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-SELECT"><span class="toc-text">5.2 SELECT</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-3-INSERT"><span class="toc-text">5.3 INSERT</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-4-UPDATE"><span class="toc-text">5.4 UPDATE</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-5-DELETE"><span class="toc-text">5.5 DELETE</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-6-ALTER"><span class="toc-text">5.6 ALTER</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-7-WHERE"><span class="toc-text">5.7 WHERE</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-8-GROUP-BY"><span class="toc-text">5.8 GROUP BY</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-9-HAVING"><span class="toc-text">5.9 HAVING</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-10-ORDER-BY"><span class="toc-text">5.10 ORDER BY</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-11-AS"><span class="toc-text">5.11 AS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-12-JOIN"><span class="toc-text">5.12 JOIN</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-13-DISTINCT"><span class="toc-text">5.13 DISTINCT</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-14%E8%A7%86%E5%9B%BE"><span class="toc-text">5.14视图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-15%E4%BA%8B%E5%8A%A1"><span class="toc-text">5.15事务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-16%E7%B4%A2%E5%BC%95"><span class="toc-text">5.16索引</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#5-16-1%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-text">5.16.1使用场景</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-16-2%E7%B4%A2%E5%BC%95%E5%88%86%E7%B1%BB"><span class="toc-text">5.16.2索引分类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-16-3%E7%B4%A2%E5%BC%95%E5%A4%B1%E6%95%88"><span class="toc-text">5.16.3索引失效</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-17-EXPLAIN"><span class="toc-text">5.17 EXPLAIN</span></a></li></ol></li></ol>
+    </div>
+  </section>
 
   
 
@@ -2642,7 +3426,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -3153,7 +3937,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"lzy","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Hexo"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"http://example.com/","keywords":null,"description":"blog","author":{"@type":"Person","name":"lzy","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"blog"},"publisher":{"@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"about","description":"blog","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/about/index.html"},"author":{"@type":"Person","name":"lzy","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/about/index.html","wordCount":0,"datePublished":"2024-05-14T12:48:48.000Z","dateModified":"2024-05-14T14:58:40.081Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"lzy","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Hexo"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/MySQL/","name":"MySQL"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/sql-note/","name":"数据库复习笔记"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"http://example.com/","keywords":null,"description":"blog","author":{"@type":"Person","name":"lzy","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"blog"},"publisher":{"@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"数据库复习笔记","description":"blog","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/sql-note/"},"author":{"@type":"Person","name":"lzy","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/sql-note/","wordCount":0,"datePublished":"2021-11-05T07:30:29.000Z","dateModified":"2024-05-14T14:38:41.499Z","articleSection":"MySQL","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://example.com/about/"/>
+  <link rel="canonical" href="http://example.com/redis-note/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -33,19 +33,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>about - Hexo</title>
+  <title>Redis用法笔记 - Hexo</title>
   <meta name="keywords" content="null">
   <meta desc name="description" content="blog - lzy - Hexo">
   
-<meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="http://example.com/about/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Redis用法笔记">
+<meta property="og:url" content="http://example.com/redis-note/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="我印象最深刻的一句话是：有病就去治 请允许我载着理发店">
+<meta property="og:description" content="1.安装Redis(1)解压文件 1tar -zxvf redis-6.2.7.tar.gz  (2)编译 12cd redis-6.2.7make  (3)安装 1make install  (4)验证 12cd &#x2F;usr&#x2F;local&#x2F;binll  查看默认安装目录 &#x2F;usr&#x2F;local&#x2F;bin redis-benchmark：性能测试工具 redis-check-">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2024-05-14T12:48:48.000Z">
-<meta property="article:modified_time" content="2024-05-14T14:58:40.081Z">
+<meta property="article:published_time" content="2022-11-05T06:22:21.000Z">
+<meta property="article:modified_time" content="2024-05-14T14:26:49.296Z">
 <meta property="article:author" content="lzy">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -2339,7 +2339,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class='cover-wrapper page dock' style="display: none;">
+      <div id="none" class='cover-wrapper post dock' style="display: none;">
         
   <div class='cover-bg lazyload placeholder' data-bg="https://gcore.jsdelivr.net/gh/MHG-LAB/cron@gh-pages/bing/bing.jpg"></div>
 
@@ -2400,8 +2400,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper">
           
 <div id="l_main" class=''>
-  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-page" id="page" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://example.com/about/index.html">
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="http://example.com/redis-note/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Hexo">
   </span>
@@ -2422,7 +2422,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        about
+        Redis用法笔记
       </h1>
       <div class='new-meta-box'>
         
@@ -2439,14 +2439,24 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/Redis/">Redis</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/Redis/" itemprop="url"><span itemprop="name">Redis</span></a>
+      </span>
+    
+  </div>
+
 
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-05-14T20:48:48+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-11-05T14:22:21+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：May 14, 2024</p>
+    <p>发布于：Nov 5, 2022</p>
   </a>
 </div>
 
@@ -2469,11 +2479,77 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>我印象最深刻的一句话是：有病就去治</p>
-<p>请允许我载着理发店</p>
+    <h2 id="1-安装Redis"><a href="#1-安装Redis" class="headerlink" title="1.安装Redis"></a>1.安装Redis</h2><p>(1)解压文件</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf redis-6.2.7.tar.gz</span><br></pre></td></tr></table></figure>
+
+<p>(2)编译</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> redis-6.2.7</span><br><span class="line">make</span><br></pre></td></tr></table></figure>
+
+<p>(3)安装</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make install</span><br></pre></td></tr></table></figure>
+
+<p>(4)验证</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/bin</span><br><span class="line">ll</span><br></pre></td></tr></table></figure>
+
+<p>查看默认安装目录 &#x2F;usr&#x2F;local&#x2F;bin</p>
+<p>redis-benchmark：性能测试工具</p>
+<p>redis-check-aof：修复有问题的AOF文件</p>
+<p>redis-check-rdb：修复有问题的rdb文件</p>
+<p>redis-sentinel：Redis集群使用</p>
+<p>redis-server：Redis服务器启动命令</p>
+<p>redis-cli：客户端，操作入口</p>
+<p>(5)启动</p>
+<p>前台启动,进入&#x2F;usr&#x2F;local&#x2F;bin目录，ctrl+C退出</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redis-server</span><br></pre></td></tr></table></figure>
+
+<p>后台启动，进入redis目录</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi redis.conf</span><br></pre></td></tr></table></figure>
+
+<p>将daemonize no改为daemonize yes</p>
+<p>设置密码，requirepass password</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/bin</span><br><span class="line">redis-server /usr/local/redis-6.2.7/redis.conf</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">查看redis进程</span></span><br><span class="line">ps -ef | grep redis</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">通过客户端连接</span></span><br><span class="line">redis-cli</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">关闭</span></span><br><span class="line">redis-cli shutdown</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">设置密码后关闭</span></span><br><span class="line">redis-cli -a password shutdown</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-使用"><a href="#2-使用" class="headerlink" title="2.使用"></a>2.使用</h2><p>默认16个数据库，下标从0开始，默认使用0号库</p>
+<p>Redis是单线程＋IO多路复用技术</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">换库</span></span><br><span class="line">select index</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">查看当前数据库的key的数量</span></span><br><span class="line">dbsize</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">清空当前库</span></span><br><span class="line">flushdb</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-1数据类型"><a href="#2-1数据类型" class="headerlink" title="2.1数据类型"></a>2.1数据类型</h3><h4 id="2-1-1常用key操作"><a href="#2-1-1常用key操作" class="headerlink" title="2.1.1常用key操作"></a>2.1.1常用key操作</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">查看当前库的所有key</span></span><br><span class="line">keys *</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">设置一个key</span></span><br><span class="line">set key value</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">判断某个key是否存在</span></span><br><span class="line">exists key</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">查看某个键的类型</span></span><br><span class="line">type key</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">删除指定的key</span></span><br><span class="line">del key</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">删除指定的key，非阻塞删除，真正的删除会在后续异步操作</span></span><br><span class="line">unlink key</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">给指定的key设置10秒的过期时间</span></span><br><span class="line">expire key 10</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">查看指定的key还有多少秒过期，-1表示永不过期，-2表示已经过期</span></span><br><span class="line">ttl key</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-1-2常用数据类型"><a href="#2-1-2常用数据类型" class="headerlink" title="2.1.2常用数据类型"></a>2.1.2常用数据类型</h4><p>(1)string</p>
+<p>二进制安全，value最大为512M</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">获取值</span></span><br><span class="line">get key</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">设置值</span></span><br><span class="line">set key value</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">追加值</span></span><br><span class="line">append key value</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">获取string的长度</span></span><br><span class="line">strlen key</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">让存储的数字值增1，如果为空，新增值为1</span></span><br><span class="line">incr key</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">让存储的数字值减1</span></span><br><span class="line">decr key</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">增加value</span></span><br><span class="line">incrby key value</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">减少value</span></span><br><span class="line">decrby key value</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">设置多个key,value</span></span><br><span class="line">mset key1 value1 key2 value2 ...</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">获取多个value</span></span><br><span class="line">mget key1 key2 ...</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">设置key,value的同时设置过期时间</span></span><br><span class="line">setex key time value</span><br></pre></td></tr></table></figure>
+
+<p>(2)List</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">在左/右侧加入数据</span></span><br><span class="line">lpush/rpush key value1 value2 ...</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">在左/右侧弹出数据</span></span><br><span class="line">lpop/rpop key</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">从列表key1右边取一个值插入key2左边</span></span><br><span class="line">rpoplpush key1 key2</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">取出指定范围的值</span></span><br><span class="line">lrange key start end</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">按下标获取元素</span></span><br><span class="line">lindex key index</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">获取列表长度</span></span><br><span class="line">llen key</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">在value前/后面插入新值</span></span><br><span class="line">linsert key BEFORE|AFTER value newvalue</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">从左边删除n个value</span></span><br><span class="line">lrem key n value</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">设置指定下标元素的值</span></span><br><span class="line">lset key index value</span><br></pre></td></tr></table></figure>
+
+<p>(3)set</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">将一个或多个元素加入刀集合key中，已经存在的元素将被忽略</span></span><br><span class="line">sadd key value1 value2 ...</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">取出<span class="built_in">set</span>中的所有值</span></span><br><span class="line">smembers key</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">判断<span class="built_in">set</span>中是否含有value,1代表有，0代表没有</span></span><br><span class="line">sismember key value</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">删除某个元素</span></span><br><span class="line">srem key value1 value2 ...</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">随机从集合中吐出一个值</span></span><br><span class="line">spop key</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">取两个集合的交集</span></span><br><span class="line">sinter key1 key2</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">取两个集合的并集</span></span><br><span class="line">sunion key1 key2</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">取两个集合的差集</span></span><br><span class="line">sdiff key1 key2</span><br></pre></td></tr></table></figure>
+
+<p>(4)Hash</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">给key集合中的field键赋值value</span></span><br><span class="line">hset key field value</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">获取key集合中的值</span></span><br><span class="line">hget key field</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">批量设置field,value</span></span><br><span class="line">hmset key field1 value1 field2 value2...</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">查看哈希表中给定域field是否存在</span></span><br><span class="line">hexists key field</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">列出该<span class="built_in">hash</span>集合的所有field</span></span><br><span class="line">hkeys key</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">列出该<span class="built_in">hash</span>集合的所有value</span></span><br><span class="line">hvals key</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">在哈希表key中的域field的值上加上增量</span></span><br><span class="line">hincrby key field increment</span><br></pre></td></tr></table></figure>
+
+<p>(5)Zset</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">将一个或多个元素加入刀集合key中</span></span><br><span class="line">zadd key score1 value1 score2 value2 ...</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">返回指定下标间的元素</span></span><br><span class="line">zrange key start stop</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">取出分数在score1到score2只见的值,score1&lt;score2</span></span><br><span class="line">zrangebyscore key score1 scroe2 [withscores]</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">取出分数在score1到score2只见的值，从大到小排序,score1&gt;score2</span></span><br><span class="line">zrevrangebyscore key score1 scroe2 [withscores]</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">删除指定值的元素</span></span><br><span class="line">zrem key value</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">统计该集合指定分区内元素个数</span></span><br><span class="line">zcount key min max</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">返回该值在集合中的排名，从0开始</span></span><br><span class="line">zrank key value</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-2发布订阅"><a href="#2-2发布订阅" class="headerlink" title="2.2发布订阅"></a>2.2发布订阅</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">订阅频道</span></span><br><span class="line">subscribe channel</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">发送消息</span></span><br><span class="line">publish channel meaasge</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-3Jedis的使用"><a href="#2-3Jedis的使用" class="headerlink" title="2.3Jedis的使用"></a>2.3Jedis的使用</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>redis.clients<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>jedis<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">version</span>&gt;</span>3.2.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
 
   </div>
   
+  
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
+      
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+      <!-- 打赏组件 -->
+      
+    </div>
   
   
     
@@ -2483,7 +2559,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-05-14T22:58:40+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-05-14T22:26:49+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：May 14, 2024</p>
@@ -2505,7 +2581,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/about/index.html&title=about - Hexo&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/redis-note/&title=Redis用法笔记 - Hexo&summary="
           
           >
           
@@ -2517,7 +2593,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/about/index.html&title=about - Hexo&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/redis-note/&title=Redis用法笔记 - Hexo&summary="
           
           >
           
@@ -2529,7 +2605,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/about/index.html&title=about - Hexo&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/redis-note/&title=Redis用法笔记 - Hexo&summary="
           
           >
           
@@ -2560,6 +2636,29 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
 
   
+    <div class="prev-next">
+      
+        <a class='prev' href='/nginx-note/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Nginx学习随笔</p>
+          <p class='content'>1.常用版本Nginx开源版
+http://nginx.org/
+Ngnix plus商业版
+https://www.nginx.com
+Openresty商业版
+http://openrest...</p>
+        </a>
+      
+      
+        <a class='next' href='/LTColor/'>
+          <p class='title'>基于Qt的自制跨平台取色器<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>1.下载一个简易的跨平台屏幕取色器，基于Qt开发。
+仓库地址：543211494&#x2F;LTColor
+点击此处获取已经打包好的程序，解压即用。
+2.介绍该程序的原理很简单，取色时先抓取全屏...</p>
+        </a>
+      
+    </div>
+  
   <!-- Custom Files postEnd begin-->
   
   <!-- Custom Files postEnd end-->
@@ -2586,9 +2685,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
 
 
-  <div class="">
-    <!-- pjax占位 -->
-  </div>
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%85Redis"><span class="toc-text">1.安装Redis</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E4%BD%BF%E7%94%A8"><span class="toc-text">2.使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">2.1数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-1%E5%B8%B8%E7%94%A8key%E6%93%8D%E4%BD%9C"><span class="toc-text">2.1.1常用key操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-2%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">2.1.2常用数据类型</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85"><span class="toc-text">2.2发布订阅</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3Jedis%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-text">2.3Jedis的使用</span></a></li></ol></li></ol>
+    </div>
+  </section>
 
   
 
@@ -2642,7 +2751,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -3153,7 +3262,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"lzy","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Hexo"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"http://example.com/","keywords":null,"description":"blog","author":{"@type":"Person","name":"lzy","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"blog"},"publisher":{"@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"about","description":"blog","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/about/index.html"},"author":{"@type":"Person","name":"lzy","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/about/index.html","wordCount":0,"datePublished":"2024-05-14T12:48:48.000Z","dateModified":"2024-05-14T14:58:40.081Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"lzy","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Hexo"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/Redis/","name":"Redis"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/redis-note/","name":"Redis用法笔记"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"http://example.com/","keywords":null,"description":"blog","author":{"@type":"Person","name":"lzy","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"blog"},"publisher":{"@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Redis用法笔记","description":"blog","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/redis-note/"},"author":{"@type":"Person","name":"lzy","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/redis-note/","wordCount":0,"datePublished":"2022-11-05T06:22:21.000Z","dateModified":"2024-05-14T14:26:49.296Z","articleSection":"Redis","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

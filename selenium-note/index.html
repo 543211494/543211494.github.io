@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://example.com/about/"/>
+  <link rel="canonical" href="http://example.com/selenium-note/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -33,19 +33,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>about - Hexo</title>
+  <title>Selenium用法 - Hexo</title>
   <meta name="keywords" content="null">
   <meta desc name="description" content="blog - lzy - Hexo">
   
-<meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="http://example.com/about/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Selenium用法">
+<meta property="og:url" content="http://example.com/selenium-note/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="我印象最深刻的一句话是：有病就去治 请允许我载着理发店">
+<meta property="og:description" content="1.下载驱动查看Chrome浏览器版本：chrome:&#x2F;&#x2F;version&#x2F; 下载地址：https:&#x2F;&#x2F;chromedriver.storage.googleapis.com&#x2F;index.html 高版本下载：https:&#x2F;&#x2F;googlechromelabs.github.io&#x2F;chrome-for-testing&#x2F; 2.使用selenium2.1python版安装：">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2024-05-14T12:48:48.000Z">
-<meta property="article:modified_time" content="2024-05-14T14:58:40.081Z">
+<meta property="article:published_time" content="2022-10-07T10:08:22.000Z">
+<meta property="article:modified_time" content="2024-05-14T14:29:06.336Z">
 <meta property="article:author" content="lzy">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -2339,7 +2339,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class='cover-wrapper page dock' style="display: none;">
+      <div id="none" class='cover-wrapper post dock' style="display: none;">
         
   <div class='cover-bg lazyload placeholder' data-bg="https://gcore.jsdelivr.net/gh/MHG-LAB/cron@gh-pages/bing/bing.jpg"></div>
 
@@ -2400,8 +2400,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper">
           
 <div id="l_main" class=''>
-  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-page" id="page" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://example.com/about/index.html">
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="http://example.com/selenium-note/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Hexo">
   </span>
@@ -2422,7 +2422,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        about
+        Selenium用法
       </h1>
       <div class='new-meta-box'>
         
@@ -2439,14 +2439,24 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/Python/">Python</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/Python/" itemprop="url"><span itemprop="name">Python</span></a>
+      </span>
+    
+  </div>
+
 
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-05-14T20:48:48+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-10-07T18:08:22+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：May 14, 2024</p>
+    <p>发布于：Oct 7, 2022</p>
   </a>
 </div>
 
@@ -2469,11 +2479,38 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>我印象最深刻的一句话是：有病就去治</p>
-<p>请允许我载着理发店</p>
+    <h2 id="1-下载驱动"><a href="#1-下载驱动" class="headerlink" title="1.下载驱动"></a>1.下载驱动</h2><p>查看Chrome浏览器版本：chrome:&#x2F;&#x2F;version&#x2F;</p>
+<p>下载地址：<a target="_blank" rel="noopener" href="https://chromedriver.storage.googleapis.com/index.html">https://chromedriver.storage.googleapis.com/index.html</a></p>
+<p>高版本下载：<a target="_blank" rel="noopener" href="https://googlechromelabs.github.io/chrome-for-testing/">https://googlechromelabs.github.io/chrome-for-testing/</a></p>
+<h2 id="2-使用selenium"><a href="#2-使用selenium" class="headerlink" title="2.使用selenium"></a>2.使用selenium</h2><h3 id="2-1python版"><a href="#2-1python版" class="headerlink" title="2.1python版"></a>2.1python版</h3><p><strong>安装：</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install selenium</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<p>爬取京东首页商品信息</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> time <span class="keyword">import</span> sleep</span><br><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.common.by <span class="keyword">import</span> By</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.chrome.service <span class="keyword">import</span> Service</span><br><span class="line"></span><br><span class="line"><span class="comment"># selenium,</span></span><br><span class="line"><span class="comment"># Version: 4.13.0</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="comment"># 不自动关闭浏览器</span></span><br><span class="line">    option = webdriver.ChromeOptions()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 不自动关闭浏览器</span></span><br><span class="line">    <span class="comment"># option.add_experimental_option(&quot;detach&quot;, True)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 设置lang和User-Agent信息，防止反爬虫检测</span></span><br><span class="line">    option.add_argument(<span class="string">&#x27;lang=zh_CN.UTF-8&#x27;</span>)</span><br><span class="line">    UserAgent = <span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.101 Safari/537.36&#x27;</span></span><br><span class="line">    option.add_argument(<span class="string">&#x27;User-Agent=&#x27;</span> + UserAgent)</span><br><span class="line"></span><br><span class="line">    <span class="comment">#页面部分内容是动态加载得时候，无头模式默认size为0x0，需要设置最大化窗口并设置windowssize，不然会出现显示不全的问题</span></span><br><span class="line">    option.add_argument(<span class="string">&#x27;window-size=1920x1080&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 无界面的浏览器</span></span><br><span class="line">    option.add_argument(<span class="string">&quot;headless&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 指定绝对路径的方式</span></span><br><span class="line">    path = <span class="string">r&#x27;E:\Python\chromedriver-win32\chromedriver.exe&#x27;</span></span><br><span class="line">    <span class="comment">#老版本指定驱动路径</span></span><br><span class="line">    <span class="comment">#browser = webdriver.Chrome(executable_path=path)</span></span><br><span class="line">    <span class="comment">#如果需要指定路径，但是路径在新版本中被重构到 Service 函数中了</span></span><br><span class="line">    service = Service(executable_path=path)</span><br><span class="line">    browser = webdriver.Chrome(options=option,service=service)</span><br><span class="line">    browser.get(<span class="string">r&#x27;https://www.jd.com/&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 执行向下滚动操作</span></span><br><span class="line">    browser.execute_script(<span class="string">&quot;window.scrollTo(0, document.body.scrollHeight)&quot;</span>)</span><br><span class="line">    <span class="comment">#等待页面加载，隐式等待</span></span><br><span class="line">    browser.implicitly_wait(<span class="number">5</span>)</span><br><span class="line">    <span class="comment">#显式等待</span></span><br><span class="line">    <span class="comment"># sleep(5)</span></span><br><span class="line">    lis = browser.find_elements(by=By.CSS_SELECTOR,value=<span class="string">&quot;li.more2_item.more2_item_good.hover-on&quot;</span>)</span><br><span class="line">    <span class="keyword">for</span> li <span class="keyword">in</span> lis:</span><br><span class="line">        <span class="built_in">str</span> = <span class="string">&quot;商品:&quot;</span>+li.find_element(by=By.CSS_SELECTOR,value=<span class="string">&quot;.more2_info_name&quot;</span>).text;</span><br><span class="line">        <span class="built_in">str</span> += <span class="string">&quot;,价格:&quot;</span>+li.find_element(by=By.CSS_SELECTOR,value=<span class="string">&quot;.more2_info_price_txt&quot;</span>).text</span><br><span class="line">        <span class="built_in">print</span>(<span class="built_in">str</span>)</span><br><span class="line">    <span class="comment">#页面源码</span></span><br><span class="line">    <span class="built_in">print</span>(browser.page_source)</span><br><span class="line">    <span class="comment"># 关闭浏览器</span></span><br><span class="line">    browser.close()</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-2java版"><a href="#2-2java版" class="headerlink" title="2.2java版"></a>2.2java版</h3><p><strong>pom.xml:</strong></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.seleniumhq.selenium<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>selenium-java<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.8.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>示例:</strong></p>
+<p>爬取京东首页商品信息</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> org.example;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.openqa.selenium.By;</span><br><span class="line"><span class="keyword">import</span> org.openqa.selenium.JavascriptExecutor;</span><br><span class="line"><span class="keyword">import</span> org.openqa.selenium.WebDriver;</span><br><span class="line"><span class="keyword">import</span> org.openqa.selenium.WebElement;</span><br><span class="line"><span class="keyword">import</span> org.openqa.selenium.chrome.ChromeDriver;</span><br><span class="line"><span class="keyword">import</span> org.openqa.selenium.chrome.ChromeOptions;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.concurrent.TimeUnit;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Main</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">( String[] args )</span>&#123;</span><br><span class="line">        <span class="comment">/* 驱动安装的路径 */</span></span><br><span class="line">        System.setProperty(<span class="string">&quot;webdriver.chrome.driver&quot;</span>, <span class="string">&quot;E:\\Python\\chromedriver-win32\\chromedriver.exe&quot;</span>);</span><br><span class="line">        <span class="type">ChromeOptions</span> <span class="variable">options</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ChromeOptions</span>();</span><br><span class="line">        <span class="comment">/* 无界面的浏览器 */</span></span><br><span class="line">        options.addArguments(<span class="string">&quot;headless&quot;</span>);</span><br><span class="line">        <span class="comment">/* 设置lang和User-Agent信息，防止反爬虫检测 */</span></span><br><span class="line">        options.addArguments(<span class="string">&quot;lang=zh_CN.UTF-8&quot;</span>);</span><br><span class="line">        options.addArguments(<span class="string">&quot;User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.101 Safari/537.36&quot;</span>);</span><br><span class="line">        <span class="comment">/* 页面部分内容是动态加载得时候，无头模式默认size为0x0，需要设置最大化窗口并设置windowssize，不然会出现显示不全的问题 */</span></span><br><span class="line">        options.addArguments(<span class="string">&quot;window-size=1920x1080&quot;</span>);</span><br><span class="line">        <span class="type">WebDriver</span> <span class="variable">driver</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ChromeDriver</span>(options);</span><br><span class="line">        driver.get(<span class="string">&quot;https://www.jd.com/&quot;</span>);</span><br><span class="line">        <span class="comment">/* 执行向下滚动操作 */</span></span><br><span class="line">        ((JavascriptExecutor) driver).executeScript(<span class="string">&quot;window.scrollTo(0, document.body.scrollHeight)&quot;</span>);</span><br><span class="line">        <span class="comment">/* 隐式等待 */</span></span><br><span class="line">        driver.manage().timeouts().implicitlyWait(<span class="number">10</span>, TimeUnit.SECONDS);</span><br><span class="line">        List&lt;WebElement&gt; list = driver.findElements(By.cssSelector(<span class="string">&quot;li.more2_item.more2_item_good.hover-on&quot;</span>));</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>;i&lt;list.size();i++)&#123;</span><br><span class="line">            System.out.print(<span class="string">&quot;商品:&quot;</span>+list.get(i).findElement(By.cssSelector(<span class="string">&quot;.more2_info_name&quot;</span>)).getText());</span><br><span class="line">            System.out.println(<span class="string">&quot;,价格:&quot;</span>+list.get(i).findElement(By.cssSelector(<span class="string">&quot;.more2_info_price_txt&quot;</span>)).getText());</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">/* 退出WebDriver，关闭所有窗口 */</span></span><br><span class="line">        <span class="comment">//driver.quit();</span></span><br><span class="line">        <span class="comment">/* 关闭当前窗口或标签页 */</span></span><br><span class="line">        driver.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
   </div>
   
+  
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
+      
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+      <!-- 打赏组件 -->
+      
+    </div>
   
   
     
@@ -2483,7 +2520,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-05-14T22:58:40+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-05-14T22:29:06+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：May 14, 2024</p>
@@ -2505,7 +2542,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/about/index.html&title=about - Hexo&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/selenium-note/&title=Selenium用法 - Hexo&summary="
           
           >
           
@@ -2517,7 +2554,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/about/index.html&title=about - Hexo&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/selenium-note/&title=Selenium用法 - Hexo&summary="
           
           >
           
@@ -2529,7 +2566,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/about/index.html&title=about - Hexo&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/selenium-note/&title=Selenium用法 - Hexo&summary="
           
           >
           
@@ -2560,6 +2597,25 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
 
   
+    <div class="prev-next">
+      
+        <a class='prev' href='/qt5-note/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Qt学习笔记</p>
+          <p class='content'>1.安装1.1ubuntu下安装教程：https://subingwen.cn/qt/
+官网下载：https://download.qt.io/archive/qt/
+国内镜像地址：https:...</p>
+        </a>
+      
+      
+        <a class='next' href='/VueQuillEditor-note/'>
+          <p class='title'>VueQuillEditor用法笔记<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>1.安装1234npm install vue-quill-editor --save//语法高亮npm install highlight.js
+
+2.main.js12345import V...</p>
+        </a>
+      
+    </div>
+  
   <!-- Custom Files postEnd begin-->
   
   <!-- Custom Files postEnd end-->
@@ -2586,9 +2642,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
 
 
-  <div class="">
-    <!-- pjax占位 -->
-  </div>
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E4%B8%8B%E8%BD%BD%E9%A9%B1%E5%8A%A8"><span class="toc-text">1.下载驱动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E4%BD%BF%E7%94%A8selenium"><span class="toc-text">2.使用selenium</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1python%E7%89%88"><span class="toc-text">2.1python版</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2java%E7%89%88"><span class="toc-text">2.2java版</span></a></li></ol></li></ol>
+    </div>
+  </section>
 
   
 
@@ -2642,7 +2708,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -3153,7 +3219,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"lzy","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Hexo"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"http://example.com/","keywords":null,"description":"blog","author":{"@type":"Person","name":"lzy","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"blog"},"publisher":{"@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"about","description":"blog","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/about/index.html"},"author":{"@type":"Person","name":"lzy","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/about/index.html","wordCount":0,"datePublished":"2024-05-14T12:48:48.000Z","dateModified":"2024-05-14T14:58:40.081Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"lzy","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Hexo"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/Python/","name":"Python"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/selenium-note/","name":"Selenium用法"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"http://example.com/","keywords":null,"description":"blog","author":{"@type":"Person","name":"lzy","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"blog"},"publisher":{"@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Selenium用法","description":"blog","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/selenium-note/"},"author":{"@type":"Person","name":"lzy","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/selenium-note/","wordCount":0,"datePublished":"2022-10-07T10:08:22.000Z","dateModified":"2024-05-14T14:29:06.336Z","articleSection":"Python","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
