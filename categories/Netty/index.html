@@ -1742,7 +1742,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1715781003571),
+    lastupdate: new Date(1716558595955),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2408,9 +2408,79 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
         
+          
+        
       
     
     
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://example.com/netty-rpc/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Hexo">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Hexo">
+    <meta itemprop="description" content="blog">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/netty-rpc/"  itemprop="url">
+        基于Netty的Rpc实现
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        1.简介仓库地址：543211494&#x2F;MyRpc
+这是一个基于netty实现的简易RPC框架，其工作流程如下图所示：
+
+服务端实现了一个自定义的注解@RpcService，使用时只需要在要提供远程服务的类上加上它就行
+在实例化的时候会找到所有带@RpcService的类实例化并存储到一个map中
+当收到客户端请求时，会解析出请求的方法参数和参数类型在这个map中查找相应的方法并调用...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-05-24T21:48:22+08:00">2024-05-24</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/Netty/">Netty</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/Netty/" itemprop="url"><span itemprop="name">Netty</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/netty-rpc/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
       
         
           <div class='post-wrapper'>
@@ -2599,7 +2669,7 @@ AIO：异步非阻塞，引入异步通道的概念，采用了Proactor模式，
           <li><a class="flat-box"
             title="/categories/Netty/" href="/categories/Netty/"
             active-action="action-categoriesNetty"
-            ><div class='name'>Netty</div><div class='badge'>(1)</div></a></li>
+            ><div class='name'>Netty</div><div class='badge'>(2)</div></a></li>
         
           <li><a class="flat-box"
             title="/categories/Nginx/" href="/categories/Nginx/"
